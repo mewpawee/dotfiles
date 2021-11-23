@@ -68,6 +68,6 @@ Pods/
 .config/karabiner/automatic_backups
 
 nvim/plugged
-.fish/conf.d
-.fish/functions
-.fish/fish_variables
+fish/conf.d
+fish/functions
+fish/fish_variables
