@@ -25,11 +25,9 @@ if status is-interactive
 end
 
 
-source /opt/homebrew/opt/asdf/libexec/asdf.fish
 
 #alias
 alias vi="nvim"
-fish_add_path /opt/homebrew/sbin
 
 switch (uname)
   case Darwin

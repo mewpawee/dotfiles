@@ -61,10 +61,12 @@ Pods/
 .atom/storage
 
 # Fish local config
-.config/fish/config-local.fish
-.config/fish/fish_variables.x86_64
+.fish/config-local.fish
+.fish/fish_variables.x86_64
 
 # Karabiner
 .config/karabiner/automatic_backups
 
 nvim/plugged
+.fish/conf.d
+.fish/functions
