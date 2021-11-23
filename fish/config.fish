@@ -24,7 +24,9 @@ if status is-interactive
     # Commands to run in interactive sessions can go here
 end
 
-
+#EXA Colors
+set -gx LS_COLORS "di=36"
+set -gx EXA_COLORS "da=3;35"
 
 #alias
 alias vi="nvim"
