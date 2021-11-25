@@ -1,6 +1,7 @@
 set nocompatible            " disable compatibility to old-time vi
 "Plugins
 call plug#begin()
+Plug '~/.fzf'
 Plug 'scrooloose/nerdtree'                        "treetab
 Plug 'junegunn/fzf', {'do': { -> fzf#install() }} "fuzzy search
 Plug 'neoclide/coc.nvim', {'branch': 'release'}   "auto complete
