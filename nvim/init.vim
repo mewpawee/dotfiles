@@ -5,12 +5,18 @@ Plug '~/.fzf'
 Plug 'scrooloose/nerdtree'                        "treetab
 Plug 'junegunn/fzf', {'do': { -> fzf#install() }} "fuzzy search
 Plug 'neoclide/coc.nvim', {'branch': 'release'}   "auto complete
-Plug 'rmehri01/onenord.nvim', { 'branch': 'main' }
 Plug 'sheerun/vim-polyglot'
+Plug 'sainnhe/sonokai'
 call plug#end()
 
-"colorscheme onenord
+" Theme
+" The configuration options should be placed before `colorscheme sonokai`.
+let g:sonokai_style = 'andromeda'
+let g:sonokai_enable_italic = 1
+let g:sonokai_disable_italic_comment = 1
+colorscheme sonokai
 
+"highlight the row
 hi CursorLineNR cterm=bold ctermbg=8
 augroup CLNRSet
     autocmd! ColorScheme * hi CursorLineNR cterm=bold
