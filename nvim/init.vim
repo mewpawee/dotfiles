@@ -7,6 +7,7 @@ Plug 'junegunn/fzf', {'do': { -> fzf#install() }} "fuzzy search
 Plug 'neoclide/coc.nvim', {'branch': 'release'}   "auto complete
 Plug 'sheerun/vim-polyglot'
 Plug 'sainnhe/sonokai'
+Plug 'luochen1990/rainbow'
 call plug#end()
 
 " Theme
@@ -16,11 +17,15 @@ let g:sonokai_enable_italic = 1
 let g:sonokai_disable_italic_comment = 1
 colorscheme sonokai
 
+" Activation rainbow parenthesis 
+let g:rainbow_active = 1
+
 "highlight the row
 hi CursorLineNR cterm=bold ctermbg=8
 augroup CLNRSet
-    autocmd! ColorScheme * hi CursorLineNR cterm=bold
+   autocmd! ColorScheme * hi CursorLineNR cterm=bold
 augroup END
+hi MatchParen cterm=bold ctermfg=125 ctermbg=131 
 
 syntax on
 set showmatch               " show matching 
@@ -28,9 +33,13 @@ set ignorecase              " case insensitive
 set hlsearch                " highlight search 
 set incsearch               " incremental search
 set tabstop=4               " number of columns occupied by a tab 
-set softtabstop=4           " see multiple spaces as tabstops so <BS> does the right thing
+set softtabstop=-1          " see multiple spaces as tabstops so <BS> does the right thing
+set shiftwidth=0            " width for autoindents
+set shiftround              " round indentation
+
 set expandtab               " converts tabs to white space
-set shiftwidth=4            " width for autoindents
+
+
 set autoindent              " indent a new line the same amount as the line just typed
 set number                  " add line numbers
 set wildmode=longest,list   " get bash-like tab completions
@@ -43,7 +52,7 @@ filetype plugin on
 "Cursor
 set cursorline              " highlight current cursorline
 set cursorcolumn		     " Show the column line for the current cursor
-hi CursorColumn ctermbg=8	 " Set the column line color
+"hi CursorColumn ctermbg=7	 " Set the column line color
 set ruler                   " Show the line and column: 
 set ttyfast                 " Speed up scrolling in Vim
 
