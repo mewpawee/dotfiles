@@ -3,15 +3,16 @@ set nocompatible
 
 "Plugins
 call plug#begin()
+Plug 'vimwiki/vimwiki'                              "vimwiki
 Plug '~/.fzf'
-Plug 'scrooloose/nerdtree'                        "treetab
-Plug 'junegunn/fzf', {'do': { -> fzf#install() }} "fuzzy search
-Plug 'neoclide/coc.nvim', {'branch': 'release'}   "auto complete
-Plug 'sheerun/vim-polyglot'                       "Syntax highlight
-Plug 'sainnhe/sonokai'                            "Theme
-Plug 'luochen1990/rainbow'                        "Colorlize Parenthesis
-Plug 'tpope/vim-commentary'                       "Toggle comment
-Plug 'lukas-reineke/indent-blankline.nvim'        "Matching Indent Line
+Plug 'scrooloose/nerdtree'                          "treetab
+Plug 'junegunn/fzf', {'do': { -> fzf#install() }}   "fuzzy search
+Plug 'neoclide/coc.nvim', {'branch': 'release'}     "auto complete
+Plug 'sheerun/vim-polyglot'                         "Syntax highlight
+Plug 'sainnhe/sonokai'                              "Theme
+Plug 'luochen1990/rainbow'                          "Colorlize Parenthesis
+Plug 'tpope/vim-commentary'                         "Toggle comment
+Plug 'lukas-reineke/indent-blankline.nvim'          "Matching Indent Line
 call plug#end()
 
 "Coc extensions
@@ -23,6 +24,9 @@ let g:coc_global_extensions = [
     \ 'coc-pyright',
     \ 'coc-yaml',
     \ ]
+
+"Vimwiki config
+let g:vimwiki_list = [{'path': '~/vimwiki/', 'syntax': 'markdown', 'ext': '.md'}]
 
 " Theme
 " The configuration options should be placed before `colorscheme sonokai`.
