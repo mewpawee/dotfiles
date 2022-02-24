@@ -1,8 +1,9 @@
-set nocompatible            " disable compatibility to old-time vi
+" disable compatibility to old-time vi
+set nocompatible
+
 "Plugins
 call plug#begin()
 Plug '~/.fzf'
-Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'scrooloose/nerdtree'                        "treetab
 Plug 'junegunn/fzf', {'do': { -> fzf#install() }} "fuzzy search
 Plug 'neoclide/coc.nvim', {'branch': 'release'}   "auto complete
@@ -13,6 +14,15 @@ Plug 'tpope/vim-commentary'                       "Toggle comment
 Plug 'lukas-reineke/indent-blankline.nvim'        "Matching Indent Line
 call plug#end()
 
+"Coc extensions
+let g:coc_global_extensions = [
+    \ 'coc-elixir',
+    \ 'coc-go',
+    \ 'coc-json',
+    \ 'coc-marketplace',
+    \ 'coc-pyright',
+    \ 'coc-yaml',
+    \ ]
 
 " Theme
 " The configuration options should be placed before `colorscheme sonokai`.
@@ -24,18 +34,12 @@ colorscheme sonokai
 " Activation rainbow parenthesis 
 let g:rainbow_active = 1
 
-"highlight the row
+" Highlight the row number
 hi CursorLineNR cterm=bold ctermbg=8
 augroup CLNRSet
    autocmd! ColorScheme * hi CursorLineNR cterm=bold
 augroup END
 hi MatchParen cterm=bold ctermfg=125 ctermbg=131 
-
-"let g:indent_blankline_use_treesitter = v:true
-" let g:indent_blankline_show_first_indent_level = v:false
-" let g:indent_blankline_show_trailing_blankline_indent = v:false
-let g:indent_blankline_show_current_context = v:true
-" let g:indent_blankline_context_patterns = ['class', 'function', 'method', '^if', '^while', '^for', '^object', '^table', 'block', 'arguments']
 
 syntax on
 set showmatch               " show matching 
@@ -49,7 +53,6 @@ set shiftround              " round indentation
 
 set expandtab               " converts tabs to white space
 
-
 set autoindent              " indent a new line the same amount as the line just typed
 set number                  " add line numbers
 set wildmode=longest,list   " get bash-like tab completions
@@ -59,21 +62,19 @@ set mouse=a                 " enable mouse click
 set clipboard=unnamedplus   " using system clipboard
 filetype plugin on
 
-"Cursor
+" Cursor
 set cursorline              " highlight current cursorline
 set cursorcolumn		     " Show the column line for the current cursor
-"hi CursorColumn ctermbg=7	 " Set the column line color
+" hi CursorColumn ctermbg=7	 " Set the column line color
 set ruler                   " Show the line and column: 
 set ttyfast                 " Speed up scrolling in Vim
 
 
-"set cc=80                  " set an 80 column border for good coding style
-"set mouse=v                 " middle-click paste with 
-" set spell                 " enable spell check (may need to download language package)
+" set cc=80                  " set an 80 column border for good coding style
+" set mouse=v                 " middle-click paste with 
+ set spell                 " enable spell check (may need to download language package)
 " set noswapfile            " disable creating swap file
 " set backupdir=~/.cache/vim " Directory to store backup files.
-"
 
-
-" Binding
+" Key Binding
 nnoremap <C-b> :NERDTreeToggle<CR>
