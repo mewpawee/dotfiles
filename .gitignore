@@ -67,6 +67,8 @@ Pods/
 # Karabiner
 .config/karabiner/automatic_backups
 
+coc/extensions/package.json
+
 nvim/plugged
 fish/conf.d
 fish/functions
