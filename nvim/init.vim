@@ -2,13 +2,17 @@ set nocompatible            " disable compatibility to old-time vi
 "Plugins
 call plug#begin()
 Plug '~/.fzf'
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'scrooloose/nerdtree'                        "treetab
 Plug 'junegunn/fzf', {'do': { -> fzf#install() }} "fuzzy search
 Plug 'neoclide/coc.nvim', {'branch': 'release'}   "auto complete
-Plug 'sheerun/vim-polyglot'
-Plug 'sainnhe/sonokai'
-Plug 'luochen1990/rainbow'
+Plug 'sheerun/vim-polyglot'                       "Syntax highlight
+Plug 'sainnhe/sonokai'                            "Theme
+Plug 'luochen1990/rainbow'                        "Colorlize Parenthesis
+Plug 'tpope/vim-commentary'                       "Toggle comment
+Plug 'lukas-reineke/indent-blankline.nvim'        "Matching Indent Line
 call plug#end()
+
 
 " Theme
 " The configuration options should be placed before `colorscheme sonokai`.
@@ -26,6 +30,12 @@ augroup CLNRSet
    autocmd! ColorScheme * hi CursorLineNR cterm=bold
 augroup END
 hi MatchParen cterm=bold ctermfg=125 ctermbg=131 
+
+"let g:indent_blankline_use_treesitter = v:true
+" let g:indent_blankline_show_first_indent_level = v:false
+" let g:indent_blankline_show_trailing_blankline_indent = v:false
+let g:indent_blankline_show_current_context = v:true
+" let g:indent_blankline_context_patterns = ['class', 'function', 'method', '^if', '^while', '^for', '^object', '^table', 'block', 'arguments']
 
 syntax on
 set showmatch               " show matching 
