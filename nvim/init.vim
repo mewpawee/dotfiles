@@ -1,7 +1,7 @@
 " disable compatibility to old-time vi
 set nocompatible
 
-"Plugins
+" Plugins
 call plug#begin()
 Plug 'vimwiki/vimwiki'                              "vimwiki
 Plug '~/.fzf'
@@ -15,7 +15,7 @@ Plug 'tpope/vim-commentary'                         "Toggle comment
 Plug 'lukas-reineke/indent-blankline.nvim'          "Matching Indent Line
 call plug#end()
 
-"Coc extensions
+" Coc extensions
 let g:coc_global_extensions = [
     \ 'coc-elixir',
     \ 'coc-go',
@@ -25,7 +25,7 @@ let g:coc_global_extensions = [
     \ 'coc-yaml',
     \ ]
 
-"Vimwiki config
+" Vimwiki config
 let g:vimwiki_list = [{'path': '~/vimwiki/', 'syntax': 'markdown', 'ext': '.md'}]
 
 " Theme
@@ -45,6 +45,7 @@ augroup CLNRSet
 augroup END
 hi MatchParen cterm=bold ctermfg=125 ctermbg=131 
 
+" Configuration
 syntax on
 set showmatch               " show matching 
 set ignorecase              " case insensitive 
@@ -60,8 +61,9 @@ set expandtab               " converts tabs to white space
 set autoindent              " indent a new line the same amount as the line just typed
 set number                  " add line numbers
 set wildmode=longest,list   " get bash-like tab completions
-filetype plugin indent on   "allow auto-indenting depending on file type
+filetype plugin indent on   " allow auto-indenting depending on file type
 syntax on                   " syntax highlighting
+set spell                   " enable spell check (may need to download language package)
 set mouse=a                 " enable mouse click
 set clipboard=unnamedplus   " using system clipboard
 
@@ -75,7 +77,6 @@ set ttyfast                 " Speed up scrolling in Vim
 
 " set cc=80                  " set an 80 column border for good coding style
 " set mouse=v                 " middle-click paste with 
- set spell                 " enable spell check (may need to download language package)
 " set noswapfile            " disable creating swap file
 " set backupdir=~/.cache/vim " Directory to store backup files.
 
