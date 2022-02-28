@@ -5,7 +5,7 @@ set nocompatible
 call plug#begin()
 Plug 'vimwiki/vimwiki'                              "vimwiki
 Plug '~/.fzf'
-Plug 'scrooloose/nerdtree'                          "treetab
+" Plug 'scrooloose/nerdtree'                          "treetab
 Plug 'junegunn/fzf', {'do': { -> fzf#install() }}   "fuzzy search
 Plug 'neoclide/coc.nvim', {'branch': 'release'}     "auto complete
 Plug 'sheerun/vim-polyglot'                         "Syntax highlight
@@ -13,6 +13,8 @@ Plug 'sainnhe/sonokai'                              "Theme
 Plug 'luochen1990/rainbow'                          "Colorlize Parenthesis
 Plug 'tpope/vim-commentary'                         "Toggle comment
 Plug 'lukas-reineke/indent-blankline.nvim'          "Matching Indent Line
+Plug 'kyazdani42/nvim-web-devicons' " for file icons
+Plug 'kyazdani42/nvim-tree.lua'
 call plug#end()
 
 " Coc extensions
@@ -24,6 +26,41 @@ let g:coc_global_extensions = [
     \ 'coc-pyright',
     \ 'coc-yaml',
     \ ]
+
+let g:nvim_tree_auto_open = 1
+let g:nvim_tree_git_hl = 1
+let g:nvim_tree_add_trailing = 1
+
+let g:nvim_tree_icons = {
+    \ 'default': '',
+    \ 'symlink': '',
+    \ 'git': {
+    \   'unstaged': "✗",
+    \   'staged': "✓",
+    \   'unmerged': "",
+    \   'renamed': "➜",
+    \   'untracked': "★",
+    \   'deleted': "",
+    \   'ignored': "◌"
+    \   },
+    \ 'folder': {
+    \   'arrow_open': "",
+    \   'arrow_closed': "",
+    \   'default': "",
+    \   'open': "",
+    \   'empty': "",
+    \   'empty_open': "",
+    \   'symlink': "",
+    \   'symlink_open': "",
+    \   },
+    \   'lsp': {
+    \     'hint': "",
+    \     'info': "",
+    \     'warning': "",
+    \     'error': "",
+    \   }
+    \ }
+:lua require'nvim-tree'.setup()
 
 " Vimwiki config
 let g:vimwiki_list = [{'path': '~/vimwiki/', 'syntax': 'markdown', 'ext': '.md'}]
@@ -81,4 +118,10 @@ set ttyfast                 " Speed up scrolling in Vim
 " set backupdir=~/.cache/vim " Directory to store backup files.
 
 " Key Binding
-nnoremap <C-b> :NERDTreeToggle<CR>
+" Tabs management mapping
+map <leader>tn :tabnew<cr>
+map <leader>to :tabonly<cr>
+map <leader>tc :tabclose<cr>
+map <leader>tm :tabmove<cr>
+
+nnoremap <C-b> :NvimTreeToggle<CR>
