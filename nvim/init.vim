@@ -125,3 +125,5 @@ map <leader>tc :tabclose<cr>
 map <leader>tm :tabmove<cr>
 
 nnoremap <C-b> :NvimTreeToggle<CR>
+nnoremap <C-h> gT
+nnoremap <C-l> gt
