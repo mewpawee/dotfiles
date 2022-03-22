@@ -15,6 +15,7 @@ Plug 'tpope/vim-commentary'                         "Toggle comment
 Plug 'lukas-reineke/indent-blankline.nvim'          "Matching Indent Line
 Plug 'kyazdani42/nvim-web-devicons' " for file icons
 Plug 'kyazdani42/nvim-tree.lua'
+Plug 'klen/nvim-test'
 call plug#end()
 
 " Coc extensions
@@ -61,7 +62,7 @@ let g:nvim_tree_icons = {
     \   }
     \ }
 :lua require'nvim-tree'.setup()
-
+:lua require 'nvim-test'.setup()
 " Vimwiki config
 let g:vimwiki_list = [{'path': '~/vimwiki/', 'syntax': 'markdown', 'ext': '.md'}]
 
