@@ -3,7 +3,6 @@ set nocompatible
 
 " Plugins
 call plug#begin()
-Plug 'vimwiki/vimwiki'                              "vimwiki
 Plug '~/.fzf'
 " Plug 'scrooloose/nerdtree'                          "treetab
 Plug 'junegunn/fzf', {'do': { -> fzf#install() }}   "fuzzy search
@@ -28,9 +27,11 @@ let g:coc_global_extensions = [
     \ 'coc-yaml',
     \ ]
 
+" Nvimtree
 let g:nvim_tree_auto_open = 1
 let g:nvim_tree_git_hl = 1
 let g:nvim_tree_add_trailing = 1
+let g:nvim_tree_quit_on_open = 1 "0 by default, closes the tree when you open a file
 
 let g:nvim_tree_icons = {
     \ 'default': '',
@@ -63,8 +64,6 @@ let g:nvim_tree_icons = {
     \ }
 :lua require'nvim-tree'.setup()
 :lua require 'nvim-test'.setup()
-" Vimwiki config
-let g:vimwiki_list = [{'path': '~/vimwiki/', 'syntax': 'markdown', 'ext': '.md'}]
 
 " Theme
 " The configuration options should be placed before `colorscheme sonokai`.
