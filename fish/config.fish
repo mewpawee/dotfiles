@@ -26,7 +26,7 @@ end
 
 #EXA Colors
 set -gx LS_COLORS "di=36"
-set -gx EXA_COLORS "da=3;35"
+set -gx EXA_COLORS "da=1;37"
 
 #alias
 alias vi="nvim"
