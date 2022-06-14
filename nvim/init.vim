@@ -118,6 +118,11 @@ set ttyfast                 " Speed up scrolling in Vim
 " set mouse=v                 " middle-click paste with 
 " set noswapfile            " disable creating swap file
 " set backupdir=~/.cache/vim " Directory to store backup files.
+"
+
+" Timeout
+set timeoutlen=1000
+set ttimeoutlen=0
 
 " Key Binding
 " Tabs management mapping
