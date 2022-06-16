@@ -64,8 +64,7 @@ let g:nvim_tree_icons = {
     \     'error': "",
     \   }
     \ }
-:lua require'nvim-tree'.setup()
-:lua require 'nvim-test'.setup()
+:lua require 'nvim-tree'.setup()
 
 " Theme
 " The configuration options should be placed before `colorscheme sonokai`.
