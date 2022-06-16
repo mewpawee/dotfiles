@@ -27,6 +27,7 @@ let g:coc_global_extensions = [
     \ 'coc-pyright',
     \ 'coc-yaml',
     \ 'coc-vetur',
+    \ 'coc-solidity',
     \ ]
 
 " Nvimtree
@@ -89,7 +90,7 @@ set showmatch               " show matching
 set ignorecase              " case insensitive 
 set hlsearch                " highlight search 
 set incsearch               " incremental search
-set tabstop=4               " number of columns occupied by a tab 
+set tabstop=2               " number of columns occupied by a tab 
 set softtabstop=-1          " see multiple spaces as tabstops so <BS> does the right thing
 set shiftwidth=0            " width for autoindents
 set shiftround              " round indentation
