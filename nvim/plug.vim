@@ -16,6 +16,7 @@ Plug 'wsdjeg/vim-pact'                              "Pact language syntax
 Plug 'nvim-lua/plenary.nvim'                        "Telescope
 Plug 'nvim-telescope/telescope.nvim'                "Telescope
 Plug 'micmine/jumpwire.nvim'                        "Jumpwire
+Plug 'windwp/nvim-autopairs'                        "Nvim autopairs
 call plug#end()
 
 " Coc extensions
@@ -48,5 +49,6 @@ lua <<EOF
       dotfiles = true,
     },
   })
+  require("nvim-autopairs").setup {}
 EOF
 
