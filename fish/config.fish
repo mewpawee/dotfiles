@@ -40,3 +40,10 @@ switch (uname)
     source (dirname (status --current-filename))/config-windows.fish
 end
 
+
+# Bun
+set -Ux BUN_INSTALL "/Users/ptmew/.bun"
+set -px --path PATH "/Users/ptmew/.bun/bin"
+
+
+export PATH="$PATH:/Users/ptmew/.foundry/bin"

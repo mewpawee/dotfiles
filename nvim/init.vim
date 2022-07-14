@@ -1,57 +1,62 @@
-" disable compatibility to old-time vi
+" init autocmd
+autocmd!
+"set script encoding
+scriptencoding utf-8
+
+" Configuration
 set nocompatible
+set number                  " add line numbers
+syntax enable
+set encoding=utf-8
+set title
+set autoindent              " indent a new line the same amount as the line just typed
+set showmatch               " show matching 
+set ignorecase              " case insensitive 
+set hlsearch                " highlight search 
+set showcmd
+set cmdheight=1
+set laststatus=2
+set scrolloff=10
+set shell=fish
+set incsearch               " incremental search
+
+set expandtab               " converts tabs to white space
+
+set wildmode=longest,list   " get bash-like tab completions
+syntax on                   " syntax highlighting
+set spell                   " enable spell check (may need to download language package)
+set mouse=a                 " enable mouse click
+set clipboard=unnamedplus   " using system clipboard
+
+" Cursor
+set cursorline              " highlight current cursorline
+set cursorcolumn		     " Show the column line for the current cursor
+" hi CursorColumn ctermbg=7	 " Set the column line color
+set ruler                   " Show the line and column: 
+set ttyfast                 " Speed up scrolling in Vim
+
+"indents
+filetype plugin indent on   " allow auto-indenting depending on file type
+set shiftwidth=2            " width for autoindents
+set tabstop=2               " number of columns occupied by a tab 
+set ai                      " Auto indent
+set si                      " Smart indent
+set nowrap                  " No Wrap lines
+set backspace=start,eol,indent
+set softtabstop=-1          " see multiple spaces as tabstops so <BS> does the right thing
+set shiftround              " round indentation
+
+" Turn off paste mode when leaving insert
+autocmd InsertLeave * set nopaste
+
+" set cc=80                  " set an 80 column border for good coding style
+" set mouse=v                 " middle-click paste with 
+" set noswapfile            " disable creating swap file
+" set backupdir=~/.cache/vim " Directory to store backup files.
+"
 
 " Import
 runtime ./plug.vim
-
-" Coc extensions
-let g:coc_global_extensions = [
-    \ 'coc-elixir',
-    \ 'coc-go',
-    \ 'coc-json',
-    \ 'coc-marketplace',
-    \ 'coc-pyright',
-    \ 'coc-yaml',
-    \ 'coc-vetur',
-    \ 'coc-solidity',
-    \ ]
-
-" Nvimtree
-let g:nvim_tree_auto_open = 1
-let g:nvim_tree_git_hl = 1
-let g:nvim_tree_add_trailing = 1
-let g:nvim_tree_quit_on_open = 1 "0 by default, closes the tree when you open a file
-
-let g:nvim_tree_icons = {
-    \ 'default': '',
-    \ 'symlink': '',
-    \ 'git': {
-    \   'unstaged': "✗",
-    \   'staged': "✓",
-    \   'unmerged': "",
-    \   'renamed': "➜",
-    \   'untracked': "★",
-    \   'deleted': "",
-    \   'ignored': "◌"
-    \   },
-    \ 'folder': {
-    \   'arrow_open': "",
-    \   'arrow_closed': "",
-    \   'default': "",
-    \   'open': "",
-    \   'empty': "",
-    \   'empty_open': "",
-    \   'symlink': "",
-    \   'symlink_open': "",
-    \   },
-    \   'lsp': {
-    \     'hint': "",
-    \     'info': "",
-    \     'warning': "",
-    \     'error': "",
-    \   }
-    \ }
-:lua require 'nvim-tree'.setup()
 
 " Theme
 " The configuration options should be placed before `colorscheme sonokai`.
@@ -70,41 +75,6 @@ augroup CLNRSet
 augroup END
 hi MatchParen cterm=bold ctermfg=125 ctermbg=131 
 
-" Configuration
-syntax on
-set showmatch               " show matching 
-set ignorecase              " case insensitive 
-set hlsearch                " highlight search 
-set incsearch               " incremental search
-set tabstop=2               " number of columns occupied by a tab 
-set softtabstop=-1          " see multiple spaces as tabstops so <BS> does the right thing
-set shiftwidth=0            " width for autoindents
-set shiftround              " round indentation
-
-set expandtab               " converts tabs to white space
-
-set autoindent              " indent a new line the same amount as the line just typed
-set number                  " add line numbers
-set wildmode=longest,list   " get bash-like tab completions
-filetype plugin indent on   " allow auto-indenting depending on file type
-syntax on                   " syntax highlighting
-set spell                   " enable spell check (may need to download language package)
-set mouse=a                 " enable mouse click
-set clipboard=unnamedplus   " using system clipboard
-
-" Cursor
-set cursorline              " highlight current cursorline
-set cursorcolumn		     " Show the column line for the current cursor
-" hi CursorColumn ctermbg=7	 " Set the column line color
-set ruler                   " Show the line and column: 
-set ttyfast                 " Speed up scrolling in Vim
-
-
-" set cc=80                  " set an 80 column border for good coding style
-" set mouse=v                 " middle-click paste with 
-" set noswapfile            " disable creating swap file
-" set backupdir=~/.cache/vim " Directory to store backup files.
-"
 
 " Timeout
 set timeoutlen=1000
