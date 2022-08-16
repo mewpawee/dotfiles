@@ -5,6 +5,14 @@ return{
   font_size = 16,
   window_background_opacity = 0.96,
   keys = {
+    {
+      key = 'G',
+      mods = 'CTRL|SHIFT|ALT',
+      action = wezterm.action.SplitPane {
+        direction = 'Down',
+        command = { args = { '/opt/homebrew/bin/gotop' } },
+      },
+    },
     -- adjust pane
     { key = "H", mods = "CMD|SHIFT", action=wezterm.action{AdjustPaneSize={"Left", 5}}},
     { key = "J", mods = "CMD|SHIFT", action=wezterm.action{AdjustPaneSize={"Down", 5}}},
