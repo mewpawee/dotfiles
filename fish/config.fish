@@ -42,8 +42,8 @@ end
 
 
 # Bun
-set -Ux BUN_INSTALL "/Users/ptmew/.bun"
-set -px --path PATH "/Users/ptmew/.bun/bin"
+set -Ux BUN_INSTALL "/Users/$USER/.bun"
+set -px --path PATH "/Users/$USER/.bun/bin"
 
 
-export PATH="$PATH:/Users/ptmew/.foundry/bin"
+export PATH="$PATH:/Users/$USER/.foundry/bin"
