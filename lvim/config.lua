@@ -23,7 +23,6 @@ lvim.keys.normal_mode["|"] = ":vsplit<cr>"  -- vertical split
 lvim.keys.normal_mode["-"] = ":split<cr>"   -- horizontal split
 lvim.keys.normal_mode["<S-l>"] = ":BufferLineCycleNext<CR>" -- next tab
 lvim.keys.normal_mode["<S-h>"] = ":BufferLineCyclePrev<CR>" -- previouse tab
-lvim.keys.normal_mode["<leader>tn"] = ":tabnew<CR>"   -- horizontal split
 -- unmap a default keymapping
 -- vim.keymap.del("n", "<C-Up>")
 -- override a default keymapping
