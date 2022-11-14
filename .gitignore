@@ -74,3 +74,5 @@ fish/functions
 fish/fish_variables
 fish/completions
 fish/fish_plugins
+
+yarn/

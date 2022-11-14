@@ -32,13 +32,14 @@ else
 
    " Cursor
    set cursorline              " highlight current cursorline
-   set cursorcolumn		     " Show the column line for the current cursor
-   " hi CursorColumn ctermbg=7	 " Set the column line color
+   set cursorcolumn		         " Show the column line for the current cursor
+   " hi CursorColumn ctermbg=7 " Set the column line color
    set ruler                   " Show the line and column: 
    set ttyfast                 " Speed up scrolling in Vim
 
    "indents
    filetype plugin indent on   " allow auto-indenting depending on file type
+   set showtabline=2           " always show tabs"
    set shiftwidth=2            " width for autoindents
    set tabstop=2               " number of columns occupied by a tab 
    set ai                      " Auto indent
@@ -84,12 +85,13 @@ else
 
    " Key Binding
    " Tabs management mapping
+   let mapleader = " " 
    map <leader>tn :tabnew<cr>
    map <leader>to :tabonly<cr>
    map <leader>tc :tabclose<cr>
    map <leader>tm :tabmove<cr>
 
-   nnoremap <C-b> :NvimTreeToggle<CR>
-   nnoremap <C-h> gT
-   nnoremap <C-l> gt
+   nnoremap <leader>e :NvimTreeToggle<CR>
+   nnoremap <S-h> gT
+   nnoremap <S-l> gt
 endif
