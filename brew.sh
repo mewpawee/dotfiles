@@ -5,4 +5,5 @@ brew install font-fira-code-nerd-font
 # rust utility
 # bat = cat
 # exa = ls
-brew install bat exa
+# delta = git management
+brew install bat exa git-delta
