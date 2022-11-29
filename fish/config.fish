@@ -47,3 +47,4 @@ set -px --path PATH "/Users/$USER/.bun/bin"
 
 
 export PATH="$PATH:/Users/$USER/.foundry/bin"
+export NPM_TOKEN=""
