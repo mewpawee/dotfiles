@@ -1,6 +1,15 @@
-#!/bin/fish
-curl -sL https://git.io/fisher | source && fisher install jorgebucaran/fisher
-fisher install oh-my-fish/theme-bobthefish
-fisher install oh-my-fish/plugin-bang-bang
-fisher install jethrokuan/z
-fisher install jhillyerd/plugin-git
+#!bin/bash
+SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
+distro=$(uname)
+
+case $distro in
+    Linux)
+        source $SCRIPT_DIR/linux.sh
+        ;;
+    Darwin)
+        source $SCRIPT_DIR/brew.sh
+        ;;
+    *)
+        echo "Not support"
+        ;;
+esac
