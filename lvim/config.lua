@@ -8,25 +8,14 @@ an executable
 ]]
 -- THESE ARE EXAMPLE CONFIGS FEEL FREE TO CHANGE TO WHATEVER YOU WANT
 -- general
-reload "user.options"
+reload "user.options" -- vim config
+reload "user.keymappings" -- keymappings
 lvim.log.level = "warn"
 lvim.format_on_save = false
 lvim.colorscheme = "tokyonight"
 -- to disable icons and use a minimalist setup, uncomment the following
 -- lvim.use_icons = false
 
--- keymappings [view all the defaults by pressing <leader>Lk]
-lvim.leader = "space"
--- add your own keymapping
-lvim.keys.normal_mode["<C-s>"] = ":w<cr>"
-lvim.keys.normal_mode["|"] = ":vsplit<cr>"  -- vertical split
-lvim.keys.normal_mode["-"] = ":split<cr>"   -- horizontal split
-lvim.keys.normal_mode["<S-l>"] = ":BufferLineCycleNext<CR>" -- next tab
-lvim.keys.normal_mode["<S-h>"] = ":BufferLineCyclePrev<CR>" -- previouse tab
--- unmap a default keymapping
--- vim.keymap.del("n", "<C-Up>")
--- override a default keymapping
--- lvim.keys.normal_mode["<C-q>"] = ":q<cr>" -- or vim.keymap.set("n", "<C-q>", ":q<cr>" )
 
 -- Change Telescope navigation to use j and k for navigation and n and p for history in both input and normal mode.
 -- we use protected-mode (pcall) just in case the plugin wasn't loaded yet.
