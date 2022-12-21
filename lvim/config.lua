@@ -1,5 +1,5 @@
 reload "user.options" -- vim config
-reload "user.keymappings" -- keymappings
+reload "user.keymaps" -- keymaps
 lvim.log.level = "warn"
 lvim.format_on_save = false
 lvim.colorscheme = "tokyonight"
