@@ -54,11 +54,12 @@ lvim.builtin.treesitter.ensure_installed = {
   "bash",
   "c",
   "javascript",
-  "json",
-  "lua",
-  "python",
   "typescript",
   "tsx",
+  "json",
+  "toml",
+  "lua",
+  "python",
   "css",
   "rust",
   "java",
@@ -66,6 +67,7 @@ lvim.builtin.treesitter.ensure_installed = {
   "solidity",
   "html",
   "vue",
+  "fish",
 }
 
 lvim.builtin.treesitter.ignore_install = { "haskell" }
