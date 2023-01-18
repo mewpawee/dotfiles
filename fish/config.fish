@@ -29,8 +29,9 @@ set -gx LS_COLORS "di=36"
 set -gx EXA_COLORS "da=1;35"
 
 #alias
-alias vi="nvim"
+alias vi="lvim"
 
+# Specific Config for each distro
 switch (uname)
   case Darwin
     source (dirname (status --current-filename))/config-osx.fish
@@ -40,11 +41,14 @@ switch (uname)
     source (dirname (status --current-filename))/config-windows.fish
 end
 
-
 # Bun
-set -Ux BUN_INSTALL "/Users/$USER/.bun"
-set -px --path PATH "/Users/$USER/.bun/bin"
+# set -Ux BUN_INSTALL "/Users/$USER/.bun"
+# set -px --path PATH "/Users/$USER/.bun/bin"
+set -Ux BUN_INSTALL "~/.bun"
+set -px --path PATH "~/.bun/bin"
 
+# Foundry binary location
+export PATH="$PATH:~/.foundry/bin"
 
-export PATH="$PATH:/Users/$USER/.foundry/bin"
+# need this for yarn with asdf
 export NPM_TOKEN=""
