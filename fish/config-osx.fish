@@ -6,4 +6,3 @@ if type -q exa
   alias lla "ll -a"
   alias ls "exa --icons"
 end
-
