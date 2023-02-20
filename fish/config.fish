@@ -41,14 +41,8 @@ switch (uname)
     source (dirname (status --current-filename))/config-windows.fish
 end
 
-# Bun
-# set -Ux BUN_INSTALL "/Users/$USER/.bun"
-# set -px --path PATH "/Users/$USER/.bun/bin"
-set -Ux BUN_INSTALL "~/.bun"
-set -px --path PATH "~/.bun/bin"
-
-# Foundry binary location
-export PATH="$PATH:~/.foundry/bin"
-
 # need this for yarn with asdf
 export NPM_TOKEN=""
+
+#Export PATH
+fish_add_path ~/.foundry/bin
