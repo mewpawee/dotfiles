@@ -46,3 +46,5 @@ export NPM_TOKEN=""
 
 #Export PATH
 fish_add_path ~/.foundry/bin
+fish_add_path ~/.yarn/bin
+
