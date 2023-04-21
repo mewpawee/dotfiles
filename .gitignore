@@ -125,3 +125,4 @@ luac.out
 java
 
 lvim/plugin/packer_compiled.lua
+configstore
