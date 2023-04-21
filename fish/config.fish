@@ -29,7 +29,7 @@ set -gx LS_COLORS "di=36"
 set -gx EXA_COLORS "da=1;35"
 
 #alias
-alias vi="lvim"
+# alias vi="lvim"
 
 # Specific Config for each distro
 switch (uname)
