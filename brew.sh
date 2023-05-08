@@ -3,7 +3,6 @@ homebrew/cask-fonts
 '
 
 BREW_PKG='
-nvim
 fzf
 asdf
 font-fira-code-nerd-font
