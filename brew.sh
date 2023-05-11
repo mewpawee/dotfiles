@@ -1,11 +1,12 @@
 BREW_CASKS='
 homebrew/cask-fonts
 '
-
+# zellij: multiplexer
 BREW_PKG='
 fzf
 asdf
 font-fira-code-nerd-font
+zellij  
 '
 
 # rust utility

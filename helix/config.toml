@@ -1,0 +1,19 @@
+theme = "tokyonight_modify"
+
+[editor]
+line-number = "relative"
+bufferline = "multiple"
+# auto-save = true
+cursorline = true
+cursorcolumn = true
+
+[editor.cursor-shape]
+insert = "bar"
+
+[editor.indent-guides]
+render = true
+character = "┆" # Some characters that work well: "▏", "┆", "┊", "⸽"
+skip-levels = 1
+
+[keys.normal]
+#esc = ["collapse_selection", "keep_primary_selection"]

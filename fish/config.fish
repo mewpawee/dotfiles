@@ -43,6 +43,7 @@ end
 
 # need this for yarn with asdf
 export NPM_TOKEN=""
+export EDITOR=hx
 
 #Export PATH
 fish_add_path ~/.foundry/bin

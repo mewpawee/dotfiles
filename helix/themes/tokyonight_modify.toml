@@ -1,0 +1,12 @@
+inherits = "tokyonight_storm"
+
+"ui.linenr" = "grey"
+"ui.linenr.selected" = "lightmagenta"
+"ui.selection.primary" = { bg = "#540099" }
+"ui.cursorline.primary" = { bg = "bossanova" }
+
+# Override colors in the palette:
+[palette]
+lightmagenta = "#FF77FF"
+white = "#ffffff"
+bossanova = "#452859"
