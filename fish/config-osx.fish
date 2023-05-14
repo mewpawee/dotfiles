@@ -1,4 +1,4 @@
-fish_add_path /opt/homebrew/sbin
+fish_add_path /opt/homebrew/bin
 source /opt/homebrew/opt/asdf/libexec/asdf.fish
 
 if type -q exa
