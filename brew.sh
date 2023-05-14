@@ -22,5 +22,6 @@ z
 rm-improved
 '
 
+echo "Install Brew packages"
 brew tap $BREW_CASKS
 brew install $BREW_PKG
