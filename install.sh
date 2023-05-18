@@ -4,10 +4,10 @@ distro=$(uname)
 
 case $distro in
     Linux)
-        source $SCRIPT_DIR/linux.sh
+        source $SCRIPT_DIR/os/linux.sh
         ;;
     Darwin)
-        source $SCRIPT_DIR/brew.sh
+        source $SCRIPT_DIR/os/brew.sh
         ;;
     *)
         echo "Not support"
