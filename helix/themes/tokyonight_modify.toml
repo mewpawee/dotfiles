@@ -1,12 +1,19 @@
 inherits = "tokyonight_storm"
 
-"ui.linenr" = "grey"
-"ui.linenr.selected" = "lightmagenta"
-"ui.selection.primary" = { bg = "#540099" }
+# Buffer line color
+"ui.statusline.inactive" = { fg = "gray" }
+"ui.statusline" = { fg = "rosegold" }
+
+# Line number, selected color
+"ui.linenr" = "lightslategray"
+"ui.linenr.selected" = "persianpink"
 "ui.cursorline.primary" = { bg = "bossanova" }
 
 # Override colors in the palette:
 [palette]
+rosegold = "#b76e79"
+lightslategray = '#708090'
+persianpink = "#FF77BB"
 lightmagenta = "#FF77FF"
 white = "#ffffff"
 bossanova = "#452859"

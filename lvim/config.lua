@@ -133,7 +133,7 @@ formatters.setup {
     -- each formatter accepts a list of options identical to https://github.com/jose-elias-alvarez/null-ls.nvim/blob/main/doc/BUILTINS.md#Configuration
     command = "prettierd",
     ---@usage specify which filetypes to enable. By default a providers will attach to all the filetypes it supports.
-    filetypes = { "typescript", "typescriptreact", "vue", "solidity" },
+    filetypes = { "typescript", "typescriptreact", "vue" },
   },
 }
 

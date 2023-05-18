@@ -16,8 +16,10 @@ export NPM_TOKEN=""
 export EDITOR=hx
 
 # Export PATH
+fish_add_path ~/.local/bin
 fish_add_path ~/.foundry/bin
 fish_add_path ~/.yarn/bin
+fish_add_path ~/.cargo/bin
 fish_add_path ~/.asdf/installs/rust/stable/bin
 
 # Use starship config

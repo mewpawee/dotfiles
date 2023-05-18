@@ -1,0 +1,8 @@
+[[language]]
+name = "solidity"
+scope = "source.sol"
+injection-regex = "(sol|solidity)"
+file-types = ["sol"]
+comment-token = "//"
+indent = { tab-width = 4, unit = "  " }
+language-server = { command = "solidity-ls", args = ["--stdio"] }
