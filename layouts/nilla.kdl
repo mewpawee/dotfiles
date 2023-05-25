@@ -1,0 +1,43 @@
+layout {
+    /* Tab template */
+    default_tab_template {
+        pane size=1 borderless=true {
+            plugin location="zellij:tab-bar"
+        }
+        children
+        pane size=2 borderless=true {
+            plugin location="zellij:status-bar"
+        }
+    }
+
+    /* Yarn template */
+    pane_template name="yarn" {
+      command "yarn"
+      start_suspended true
+    }
+
+    /* Main Editor */
+    tab name="Editor" focus=true {
+      // pane edit="."
+    }
+
+    /* Yarn Runner */
+    tab name="Runner" {
+        pane split_direction="horizontal" {
+          pane split_direction="vertical" size="30%" {
+            yarn { args "test:verbose"; }
+            yarn { args "lint"; }
+          }
+          pane split_direction="vertical" size="70%"{
+            yarn { args "dev"; }
+            yarn { args "dev:testnet"; }
+          }
+        }
+    }
+    /* Fork Node */
+    tab name="Anvil-Node" {
+        yarn { args "anvil-node" "all"; }
+    }
+
+
+}

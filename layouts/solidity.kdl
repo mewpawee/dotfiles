@@ -1,0 +1,31 @@
+layout {
+    /* Tab template */
+    default_tab_template {
+        pane size=1 borderless=true {
+            plugin location="zellij:tab-bar"
+        }
+        children
+        pane size=2 borderless=true {
+            plugin location="zellij:status-bar"
+        }
+    }
+
+    /* forge template */
+    pane_template name="forge" {
+      command "forge"
+      start_suspended true
+    }
+
+    /* Main Editor */
+    tab name="Editor" focus=true {
+      pane
+    }
+    tab name="Runner" {
+      pane split_direction="vertical" size="70%" {
+        pane size="70%"
+        pane size="30%" {
+          forge {args "test";}
+        }
+      }
+    }
+}

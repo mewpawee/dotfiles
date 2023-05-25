@@ -1,0 +1,17 @@
+layout {
+    pane split_direction="vertical" {
+        pane edit="."
+        pane split_direction="horizontal" {
+            yarn { args "dev"; }
+            yarn { args "lint"; }
+            yarn { args "test"; }
+        }
+    }
+    pane size=1 borderless=true {
+        plugin location="zellij:compact-bar"
+    }
+    pane_template name="yarn" {
+        command "yarn"
+        start_suspended true
+    }
+}
