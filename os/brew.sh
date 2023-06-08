@@ -22,6 +22,8 @@ bottom
 exa
 git-delta
 z
+ripgrep
+starship
 rm-improved
 '
 
