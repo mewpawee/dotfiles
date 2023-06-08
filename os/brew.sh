@@ -9,6 +9,9 @@ homebrew/cask-fonts
 # exa = ls
 # delta = git management
 BREW_PKG='
+microsoft-edge
+brave-browser
+warp
 fish
 fzf
 asdf
