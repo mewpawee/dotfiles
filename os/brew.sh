@@ -1,13 +1,4 @@
 #!/bin/sh
-# BREW_CASKS='
-# homebrew/cask-fonts
-# '
-# zellij: multiplexer
-# rust utility
-# bat = cat
-# bottom = top
-# exa = ls
-# delta = git management
 EDITOR_PKG='
 neovim
 helix
@@ -43,11 +34,14 @@ CODING_PKG='
 asdf
 '
 
-echo "Install Brew packages"
-# brew tap $BREW_CASKS
+GENERAL_PKG='
+spotify
+'
 
+echo "Install Brew packages"
 brew install $EDITOR_PKG
 brew install $BROWSER_PKG
 brew install $TERMINAL_PKG
 brew install $UTILITY_PKG
 brew install $CODING_PKG
+brew install $GENERAL_PKG
