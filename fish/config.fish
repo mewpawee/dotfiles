@@ -24,3 +24,9 @@ fish_add_path ~/.asdf/installs/rust/stable/bin
 
 # Use starship config
 starship init fish | source
+
+export PATH="$PATH:/Users/mewpawee/.foundry/bin"
+
+export PATH="$PATH:/Users/mewpawee/.foundry/bin"
+
+export PATH="$PATH:/Users/mewpawee/.foundry/bin"
