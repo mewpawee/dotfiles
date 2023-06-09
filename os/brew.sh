@@ -38,7 +38,16 @@ GENERAL_PKG='
 spotify
 '
 
+echo "Check if Homebrew Installed"
+if ! command -v brew &> /dev/null
+then
+    echo "Homebrew could not be found"
+    echo "Install Homebrew"
+    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+fi
+
 echo "Install Brew packages"
+# brew bundle install --file ~/.config/os/Brewfile
 brew install $EDITOR_PKG
 brew install $BROWSER_PKG
 brew install $TERMINAL_PKG
