@@ -1,7 +1,10 @@
 #!/bin/sh
+TAP='
+homebrew/cask-fonts
+'
+
 EDITOR_PKG='
-neovim
-helix
+neovim helix
 libusb
 '
 
@@ -35,7 +38,10 @@ asdf
 '
 
 GENERAL_PKG='
+bitwarden
+discord
 spotify
+steam
 '
 
 echo "Check if Homebrew Installed"
@@ -48,6 +54,7 @@ fi
 
 echo "Install Brew packages"
 # brew bundle install --file ~/.config/os/Brewfile
+brew tap $TAP
 brew install $EDITOR_PKG
 brew install $BROWSER_PKG
 brew install $TERMINAL_PKG
