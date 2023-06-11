@@ -7,7 +7,7 @@ case $distro in
         source $SCRIPT_DIR/os/linux.sh
         ;;
     Darwin)
-        source $SCRIPT_DIR/os/brew.sh
+        source $SCRIPT_DIR/os/mac.sh
         ;;
     *)
         echo "Not support"

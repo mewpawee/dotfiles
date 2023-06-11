@@ -4,6 +4,7 @@ deno
 nodejs
 rust
 solidity
+python
 '
 
 # Add Plugins

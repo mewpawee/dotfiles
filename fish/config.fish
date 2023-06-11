@@ -30,3 +30,5 @@ export PATH="$PATH:/Users/mewpawee/.foundry/bin"
 export PATH="$PATH:/Users/mewpawee/.foundry/bin"
 
 export PATH="$PATH:/Users/mewpawee/.foundry/bin"
+
+export PATH="$PATH:/Users/paweetantivasdakarn/.foundry/bin"
