@@ -35,9 +35,11 @@ bottom
 
 CODING_PKG='
 asdf
+gpg
 '
 
 GENERAL_PKG='
+notion
 bitwarden
 discord
 spotify

@@ -2,6 +2,7 @@
 PLUGINS='
 deno
 nodejs
+yarn
 rust
 solidity
 python
