@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "solidity-language-server": "^0.0.3",
+    "surya": "^0.4.6"
+  }
+}
