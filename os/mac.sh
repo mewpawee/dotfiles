@@ -40,6 +40,7 @@ gpg
 
 GENERAL_PKG='
 notion
+logseq
 bitwarden
 discord
 spotify
