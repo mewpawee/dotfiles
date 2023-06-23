@@ -13,3 +13,7 @@ lvim.keys.normal_mode["U"] = "<C-r>" -- redo
 lvim.keys.normal_mode["<C-w>q"] = ":bd<cr>" -- close current tab(buffer)
 lvim.keys.normal_mode["<C-w>v"] = ":vs<cr>" -- vertical split
 lvim.keys.normal_mode["<C-w>s"] = ":sp<cr>" -- horizontal split
+
+
+lvim.keys.normal_mode["H"] = ":BufferLineMovePrev<cr>" -- move buffer to the left
+lvim.keys.normal_mode["L"] = ":BufferLineMoveNext<cr>" -- move buffer to the right

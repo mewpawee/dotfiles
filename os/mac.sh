@@ -36,6 +36,8 @@ bottom
 CODING_PKG='
 asdf
 gpg
+tmux
+bash
 '
 
 GENERAL_PKG='
@@ -45,6 +47,7 @@ bitwarden
 discord
 spotify
 steam
+zoom
 '
 
 echo "Check if Homebrew Installed"
