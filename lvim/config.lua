@@ -32,9 +32,9 @@ lvim.builtin.treesitter.ensure_installed = {
   "html",
   "vue",
   "fish",
+  "haskell"
 }
 
-lvim.builtin.treesitter.ignore_install = { "haskell" }
 lvim.builtin.treesitter.highlight.enable = true
 
 -- generic LSP settings
@@ -58,11 +58,9 @@ lvim.builtin.treesitter.highlight.enable = true
 
 -- ---configure a server manually. !!Requires `:LvimCacheReset` to take effect!!
 -- ---see the full default list `:lua print(vim.inspect(lvim.lsp.automatic_configuration.skipped_servers))`
-vim.list_extend(lvim.lsp.automatic_configuration.skipped_servers, { "solidity_ls" })
-local opts = {
-  cmd = { "solidity-language-server", "--stdio" }
-} -- check the lspconfig documentation for a list of all possible options
-require("lvim.lsp.manager").setup("solidity_ls", opts)
+vim.list_extend(lvim.lsp.automatic_configuration.skipped_servers, { "tsserver" })
+require("lvim.lsp.manager").setup("denols", {})
+
 
 -- ---remove a server from the skipped list, e.g. eslint, or emmet_ls. !!Requires `:LvimCacheReset` to take effect!!
 -- ---`:LvimInfo` lists which server(s) are skipped for the current filetype
@@ -79,12 +77,39 @@ require("lvim.lsp.manager").setup("solidity_ls", opts)
 --   --Enable completion triggered by <c-x><c-o>
 --   buf_set_option("omnifunc", "v:lua.vim.lsp.omnifunc")
 -- end
+--
+
+-- Custom Formatter
+local helpers = require("null-ls.helpers")
+local FORMATTING = require("null-ls.methods").internal.FORMATTING
+require("null-ls").register({
+  --your custom sources go here
+  helpers.make_builtin({
+    name = "forge_fmt",
+    meta = {
+      url = "https://book.getfoundry.sh/reference/config/formatter",
+      description = "Formats Solidity source files.",
+    },
+    method = FORMATTING,
+    filetypes = { "solidity" },
+    generator_opts = {
+      command = "forge",
+      args = {
+        "fmt",
+        "$FILENAME",
+      },
+      to_stdin = false,
+      to_temp_file = true,
+    },
+    factory = helpers.formatter_factory,
+  })
+})
 
 -- -- set a formatter, this will override the language server formatting capabilities (if it exists)
 local formatters = require "lvim.lsp.null-ls.formatters"
 formatters.setup {
-  { command = "black", filetypes = { "python" } },
-  { command = "isort", filetypes = { "python" } },
+  { command = "black",    filetypes = { "python" } },
+  { command = "isort",    filetypes = { "python" } },
   -- {
   --   -- each formatter accepts a list of options identical to https://github.com/jose-elias-alvarez/null-ls.nvim/blob/main/doc/BUILTINS.md#Configuration
   --   command = "prettier",
@@ -94,12 +119,13 @@ formatters.setup {
   --   ---@usage specify which filetypes to enable. By default a providers will attach to all the filetypes it supports.
   --   filetypes = { "typescript", "typescriptreact", "solidity" },
   -- },
-  {
-    -- each formatter accepts a list of options identical to https://github.com/jose-elias-alvarez/null-ls.nvim/blob/main/doc/BUILTINS.md#Configuration
-    command = "prettierd",
-    ---@usage specify which filetypes to enable. By default a providers will attach to all the filetypes it supports.
-    filetypes = { "typescript", "typescriptreact", "vue" },
-  },
+  -- {
+  --   -- each formatter accepts a list of options identical to https://github.com/jose-elias-alvarez/null-ls.nvim/blob/main/doc/BUILTINS.md#Configuration
+  --   command = "prettierd",
+  --   ---@usage specify which filetypes to enable. By default a providers will attach to all the filetypes it supports.
+  --   filetypes = { "typescript", "typescriptreact", "vue" },
+  -- },
+  { command = "deno_fmt", filetypes = { "typescript" } }
 }
 
 -- -- set additional linters
@@ -118,6 +144,9 @@ linters.setup {
     ---@usage specify which filetypes to enable. By default a providers will attach to all the filetypes it supports.
     filetypes = { "javascript", "python" },
   },
+  -- {
+  --   command = "solhint", filetypes = { "solidity" }
+  -- }
 }
 
 -- Additional Plugins

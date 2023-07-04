@@ -46,8 +46,9 @@ logseq
 bitwarden
 discord
 spotify
-steam
 zoom
+anydesk
+keyboardcleantool
 '
 
 echo "Check if Homebrew Installed"
