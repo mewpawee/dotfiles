@@ -28,7 +28,7 @@ lvim.builtin.treesitter.ensure_installed = {
   "rust",
   "java",
   "yaml",
-  "solidity",
+  -- "solidity",
   "html",
   "vue",
   "fish",
@@ -58,7 +58,16 @@ lvim.builtin.treesitter.highlight.enable = true
 
 -- ---configure a server manually. !!Requires `:LvimCacheReset` to take effect!!
 -- ---see the full default list `:lua print(vim.inspect(lvim.lsp.automatic_configuration.skipped_servers))`
-vim.list_extend(lvim.lsp.automatic_configuration.skipped_servers, { "tsserver" })
+
+
+local util = require("lspconfig/util")
+vim.list_extend(lvim.lsp.automatic_configuration.skipped_servers, { "solidity", "tsserver" })
+local solidity_opts = {
+  cmd = { "solidity-language-server", "--stdio" },
+  root_dir = util.root_pattern("foundry.toml", "remappings.txt")
+}
+require("lvim.lsp.manager").setup("solidity_ls", solidity_opts)
+-- require("lvim.lsp.manager").setup("solidity_ls_nomicfoundation", solidity_nomic_opts)
 require("lvim.lsp.manager").setup("denols", {})
 
 

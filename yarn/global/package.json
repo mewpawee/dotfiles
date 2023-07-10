@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "@ignored/solidity-language-server": "^0.6.14",
     "solhint": "^3.4.1",
     "solidity-language-server": "^0.0.3",
     "surya": "^0.4.6"
