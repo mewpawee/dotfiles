@@ -91,6 +91,7 @@ require("lvim.lsp.manager").setup("denols", {})
 -- Custom Formatter
 local helpers = require("null-ls.helpers")
 local FORMATTING = require("null-ls.methods").internal.FORMATTING
+--solidity
 require("null-ls").register({
   --your custom sources go here
   helpers.make_builtin({
@@ -113,6 +114,29 @@ require("null-ls").register({
     factory = helpers.formatter_factory,
   })
 })
+-- rust-leptos
+require("null-ls").register({
+  --your custom sources go here
+  helpers.make_builtin({
+    name = "leptos_fmt",
+    meta = {
+      url = "https://book.getfoundry.sh/reference/config/formatter",
+      description = "Formats Solidity source files.",
+    },
+    method = FORMATTING,
+    filetypes = { "rust" },
+    generator_opts = {
+      command = "leptosfmt",
+      args = {
+        "$FILENAME"
+      },
+      to_stdin = false,
+      to_temp_file = true,
+    },
+    factory = helpers.formatter_factory,
+  })
+})
+
 
 -- -- set a formatter, this will override the language server formatting capabilities (if it exists)
 local formatters = require "lvim.lsp.null-ls.formatters"
