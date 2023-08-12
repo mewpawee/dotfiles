@@ -9,6 +9,7 @@ export PATH=~/.local/bin:$PATH
 export PATH=~/.foundry/bin:$PATH
 export PATH=~/.asdf/shims:$PATH
 export PATH=~/.cargo/bin:$PATH
+export PATH=~/.yarn/bin:$PATH
 # # load zgenom
 # source "${HOME}/.zgenom/zgenom.zsh"
 

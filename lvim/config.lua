@@ -61,14 +61,14 @@ lvim.builtin.treesitter.highlight.enable = true
 
 
 local util = require("lspconfig/util")
-vim.list_extend(lvim.lsp.automatic_configuration.skipped_servers, { "solidity", "tsserver" })
+vim.list_extend(lvim.lsp.automatic_configuration.skipped_servers, { "solidity" })
 local solidity_opts = {
   cmd = { "solidity-language-server", "--stdio" },
   root_dir = util.root_pattern("foundry.toml", "remappings.txt")
 }
 require("lvim.lsp.manager").setup("solidity_ls", solidity_opts)
 -- require("lvim.lsp.manager").setup("solidity_ls_nomicfoundation", solidity_nomic_opts)
-require("lvim.lsp.manager").setup("denols", {})
+-- require("lvim.lsp.manager").setup("denols", {})
 
 
 -- ---remove a server from the skipped list, e.g. eslint, or emmet_ls. !!Requires `:LvimCacheReset` to take effect!!
@@ -141,8 +141,8 @@ require("null-ls").register({
 -- -- set a formatter, this will override the language server formatting capabilities (if it exists)
 local formatters = require "lvim.lsp.null-ls.formatters"
 formatters.setup {
-  { command = "black",    filetypes = { "python" } },
-  { command = "isort",    filetypes = { "python" } },
+  { command = "black", filetypes = { "python" } },
+  { command = "isort", filetypes = { "python" } },
   -- {
   --   -- each formatter accepts a list of options identical to https://github.com/jose-elias-alvarez/null-ls.nvim/blob/main/doc/BUILTINS.md#Configuration
   --   command = "prettier",
@@ -152,13 +152,13 @@ formatters.setup {
   --   ---@usage specify which filetypes to enable. By default a providers will attach to all the filetypes it supports.
   --   filetypes = { "typescript", "typescriptreact", "solidity" },
   -- },
-  -- {
-  --   -- each formatter accepts a list of options identical to https://github.com/jose-elias-alvarez/null-ls.nvim/blob/main/doc/BUILTINS.md#Configuration
-  --   command = "prettierd",
-  --   ---@usage specify which filetypes to enable. By default a providers will attach to all the filetypes it supports.
-  --   filetypes = { "typescript", "typescriptreact", "vue" },
-  -- },
-  { command = "deno_fmt", filetypes = { "typescript" } }
+  {
+    -- each formatter accepts a list of options identical to https://github.com/jose-elias-alvarez/null-ls.nvim/blob/main/doc/BUILTINS.md#Configuration
+    command = "prettierd",
+    ---@usage specify which filetypes to enable. By default a providers will attach to all the filetypes it supports.
+    filetypes = { "typescript", "typescriptreact", "vue" },
+  },
+  -- { command = "deno_fmt", filetypes = { "typescript" } }
 }
 
 -- -- set additional linters
