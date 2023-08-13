@@ -19,7 +19,7 @@ character = "╎" # Some characters that work well: "▏","╎", "┆", "┊", "
 
 [editor.lsp]
 # better be a toggle
-# display-inlay-hints = true
+display-inlay-hints = true
 
 [keys.normal]
 # move line down
