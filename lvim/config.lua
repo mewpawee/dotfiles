@@ -64,7 +64,7 @@ local util = require("lspconfig/util")
 vim.list_extend(lvim.lsp.automatic_configuration.skipped_servers, { "solidity" })
 local solidity_opts = {
   cmd = { "solidity-language-server", "--stdio" },
-  root_dir = util.root_pattern("foundry.toml", "remappings.txt")
+  root_dir = util.root_pattern("foundry.toml", "remappings.txt", "package.json")
 }
 require("lvim.lsp.manager").setup("solidity_ls", solidity_opts)
 -- require("lvim.lsp.manager").setup("solidity_ls_nomicfoundation", solidity_nomic_opts)

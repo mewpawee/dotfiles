@@ -5,4 +5,4 @@ injection-regex = "(sol|solidity)"
 file-types = ["sol"]
 comment-token = "//"
 indent = { tab-width = 4, unit = "  " }
-language-server = { command = "solidity-ls", args = ["--stdio"] }
+language-server = { command = "solidity-language-server", args = ["--stdio"] }
