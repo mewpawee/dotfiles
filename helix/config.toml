@@ -1,11 +1,13 @@
-theme = "tokyonight_modify"
+# theme = "tokyonight_modify"
+theme = "catppuccin_modify"
 
 [editor]
+auto-format = true
+auto-save = true
 line-number = "relative"
 color-modes = true
 cursorline = true
 cursorcolumn = true
-auto-save = true
 bufferline = "multiple"
 
 [editor.cursor-shape]
@@ -13,9 +15,19 @@ insert = "bar"
 normal = "block"
 select = "underline"
 
+[editor.statusline]
+left = ["mode", "spinner"]
+center = ["file-name"]
+right = ["diagnostics","file-encoding", "file-line-ending","file-type","position"]
+# separator = "|"
+mode.normal = "NORMAL"
+mode.insert = "INSERT"
+mode.select = "SELECT"
+
 [editor.indent-guides]
 render = true
-character = "╎" # Some characters that work well: "▏","╎", "┆", "┊", "⸽"
+# character = "╎" # Some characters that work well: "▏","╎", "┆", "┊", "⸽"
+character = "▏" # Some characters that work well: "▏","╎", "┆", "┊", "⸽"
 
 [editor.lsp]
 # better be a toggle

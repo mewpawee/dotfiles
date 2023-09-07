@@ -1,16 +1,12 @@
-inherits = "tokyonight_storm"
-
+inherits = "catppuccin_macchiato"
 # Buffer line color
-"ui.statusline.inactive" = { fg = "gray" }
-"ui.statusline" = { fg = "rosegold" }
+# "ui.statusline.inactive" = { fg = "gray" }
+# "ui.statusline" = { fg = "rosegold" }
 
 # Line number, selected color
-"ui.linenr" = "lightslategray"
 "ui.linenr.selected" = "persianpink"
-"ui.cursorline.primary" = { bg = "background_highlight" }
-"ui.cursor.primary" = {fg="white", bg = "red"}
 
-"comment" = { fg = "grey-comment", modifiers = ["italic"] }
+# "comment" = { fg = "grey-comment", modifiers = ["italic"] }
 
 # Override colors in the palette:
 [palette]

@@ -25,3 +25,12 @@ export EDITOR=hx
 #   # generate the init script from plugins above
 #   zgenom save
 # fi
+
+# pnpm
+export PNPM_HOME="/Users/mewpawee/Library/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
+export PATH="/opt/homebrew/opt/postgresql@15/bin:$PATH"
