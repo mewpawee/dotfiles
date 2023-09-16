@@ -2,7 +2,7 @@
 theme = "catppuccin_modify"
 
 [editor]
-auto-format = true
+auto-format = false
 auto-save = true
 line-number = "relative"
 color-modes = true

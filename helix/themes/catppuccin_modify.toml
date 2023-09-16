@@ -1,10 +1,10 @@
-inherits = "catppuccin_macchiato"
+inherits = "catppuccin_frappe"
 # Buffer line color
 # "ui.statusline.inactive" = { fg = "gray" }
 # "ui.statusline" = { fg = "rosegold" }
 
 # Line number, selected color
-"ui.linenr.selected" = "persianpink"
+# "ui.linenr.selected" = "persianpink"
 
 # "comment" = { fg = "grey-comment", modifiers = ["italic"] }
 
