@@ -1,8 +1,6 @@
 #!/bin/bash
 PLUGINS='
-deno
-nodejs
-yarn
+bun
 rust
 solidity
 python

@@ -38,6 +38,7 @@ asdf
 gpg
 tmux
 bash
+zoxide
 '
 
 GENERAL_PKG='
