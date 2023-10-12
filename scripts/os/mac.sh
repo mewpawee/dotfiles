@@ -21,16 +21,29 @@ zellij
 rectangle
 '
 
+# ffmpegthumbnailer - video thumbnails
+# unar - archive preview
+# jq - JSON preview
+# poppler - PDF preview
+# fd - file searching
+# ripgrep - content searching
+# fzf - directory jumping
+# zoxide - directory jumping
 UTILITY_PKG='
 bat
 exa
 git-delta
 z
-ripgrep
-fd
-fzf
 rm-improved
 bottom
+ffmpegthumbnailer
+unar
+jq
+poppler
+fd
+ripgrep
+fzf
+zoxide
 '
 
 CODING_PKG='
@@ -38,7 +51,6 @@ asdf
 gpg
 tmux
 bash
-zoxide
 '
 
 GENERAL_PKG='

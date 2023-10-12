@@ -1,10 +1,24 @@
 [[language]]
 name = "solidity"
 scope = "source.sol"
-injection-regex = "(sol|solidity)"
+injection-regex = "^(sol|solidity)$"
 file-types = ["sol"]
+# roots = []
 comment-token = "//"
-indent = { tab-width = 4, unit = "  " }
+# indent = { tab-width = 2, unit = " " }
 language-server = { command = "solidity-language-server", args = ["--stdio"] }
-formatter = {command = "forge", args = ["fmt", "-r", "-"]}
-auto-format = true
+formatter = { command = 'prettier', args = ["--parser", "solidity-parse"]}
+
+# [[language]]
+# name = "solidity"
+# scope = "source.sol"
+# injection-regex = "^(sol|solidity)$"
+# file-types = ["sol"]
+# roots = []
+# comment-token = "//"
+# indent = { tab-width = 4, unit = "    " }
+# language-server = { command = "nomicfoundation-solidity-language-server", args = ["--stdio"] }
+
+[[grammar]]
+name = "solidity"
+source = { git = "https://github.com/JoranHonig/tree-sitter-solidity", rev = "168020304759ad5d8b4a88a541a699134e3730c5" }

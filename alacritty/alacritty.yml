@@ -12,5 +12,5 @@ font:
   # Point size
   size: 16
 
-shell:
- program: /opt/homebrew/bin/nu
+# shell:
+#  program: /opt/homebrew/bin/nu
