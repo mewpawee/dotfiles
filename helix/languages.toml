@@ -6,7 +6,8 @@ file-types = ["sol"]
 # roots = []
 comment-token = "//"
 # indent = { tab-width = 2, unit = " " }
-language-server = { command = "solidity-language-server", args = ["--stdio"] }
+# language-server = { command = "solidity-language-server", args = ["--stdio"] }
+language-servers = [ "solidity" ]
 formatter = { command = 'prettier', args = ["--parser", "solidity-parse"]}
 
 # [[language]]
@@ -21,4 +22,11 @@ formatter = { command = 'prettier', args = ["--parser", "solidity-parse"]}
 
 [[grammar]]
 name = "solidity"
-source = { git = "https://github.com/JoranHonig/tree-sitter-solidity", rev = "168020304759ad5d8b4a88a541a699134e3730c5" }
+# source = { git = "https://github.com/JoranHonig/tree-sitter-solidity", rev = "168020304759ad5d8b4a88a541a699134e3730c5" }
+source = { git = "https://github.com/JoranHonig/tree-sitter-solidity"}
+
+[language-server.solidity]
+command = "nomicfoundation-solidity-language-server"
+args = ["--stdio"]
+# config = { provideFormatter = true }
+# environment = { "ENV1" = "value1", "ENV2" = "value2" }
