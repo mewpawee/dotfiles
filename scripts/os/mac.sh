@@ -4,12 +4,12 @@ homebrew/cask-fonts
 '
 
 EDITOR_PKG='
-neovim helix
+neovim
+helix
 libusb
 '
 
 BROWSER_PKG='
-microsoft-edge
 brave-browser
 '
 TERMINAL_PKG='
