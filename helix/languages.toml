@@ -1,13 +1,11 @@
+# Solidity
 [[language]]
 name = "solidity"
 auto-format = true
 scope = "source.sol"
 injection-regex = "^(sol|solidity)$"
 file-types = ["sol"]
-# roots = []
 comment-token = "//"
-# indent = { tab-width = 2, unit = " " }
-# language-server = { command = "solidity-language-server", args = ["--stdio"] }
 language-servers = [ "solidity" ]
 formatter = { command = 'prettier', args = ["--parser", "solidity-parse"]}
 
@@ -29,5 +27,8 @@ formatter = { command = 'prettier', args = ["--parser", "solidity-parse"]}
 [language-server.solidity]
 command = "nomicfoundation-solidity-language-server"
 args = ["--stdio"]
-# config = { provideFormatter = true }
-# environment = { "ENV1" = "value1", "ENV2" = "value2" }
+
+# Rust
+[[language]]
+name = "rust"
+formatter = { command = "leptosfmt" , args = ["--stdin","--rustfmt"] }

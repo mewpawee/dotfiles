@@ -10,6 +10,8 @@ export PATH=~/.foundry/bin:$PATH
 export PATH=~/.asdf/shims:$PATH
 export PATH=~/.cargo/bin:$PATH
 export PATH=~/.bun/bin:$PATH
+export PATH="$PATH:/Users/mewpawee/.huff/bin"
+export PATH="/opt/homebrew/opt/postgresql@15/bin:$PATH"
 export EDITOR=lvim
 # export PRETTIERD_DEFAULT_CONFIG=~/.config/.prettierrc
 # # load zgenom
