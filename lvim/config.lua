@@ -2,7 +2,6 @@ reload "user.options" -- vim config
 reload "user.keymaps" -- keymaps
 lvim.log.level = "warn"
 lvim.format_on_save = true
-
 lvim.colorscheme = "tokyonight-storm"
 
 -- TODO: User Config for predefined plugins
@@ -12,6 +11,7 @@ lvim.builtin.alpha.mode = "dashboard"
 lvim.builtin.terminal.active = true
 lvim.builtin.nvimtree.setup.view.side = "left"
 lvim.builtin.nvimtree.setup.renderer.icons.show.git = true
+lvim.builtin.treesitter.highlight.enable = true
 
 -- if you don't want all the parsers change this to a table of the ones you want
 lvim.builtin.treesitter.ensure_installed = {
@@ -34,7 +34,6 @@ lvim.builtin.treesitter.ensure_installed = {
   "haskell"
 }
 
-lvim.builtin.treesitter.highlight.enable = true
 
 -- generic LSP settings
 
@@ -66,8 +65,8 @@ local solidity_opts = {
   filetypes = { 'solidity' },
   root_dir = util.find_git_ancestor,
   single_file_support = true,
-  -- root_dir = util.root_pattern("foundry.toml", "remappings.txt", "package.json")
 }
+
 require("lvim.lsp.manager").setup("solidity_ls", solidity_opts)
 
 
@@ -143,29 +142,16 @@ local formatters = require "lvim.lsp.null-ls.formatters"
 formatters.setup {
   { command = "black", filetypes = { "python" } },
   { command = "isort", filetypes = { "python" } },
-  -- {
-  --   -- each formatter accepts a list of options identical to https://github.com/jose-elias-alvarez/null-ls.nvim/blob/main/doc/BUILTINS.md#Configuration
-  --   command = "prettier",
-  --   ---@usage arguments to pass to the formatter
-  --   -- these cannot contain whitespaces, options such as `--line-width 80` become either `{'--line-width', '80'}` or `{'--line-width=80'}`
-  --   extra_args = { "--print-with", "100" },
-  --   ---@usage specify which filetypes to enable. By default a providers will attach to all the filetypes it supports.
-  --   filetypes = { "typescript", "typescriptreact", "solidity" },
-  -- },
   {
-    -- each formatter accepts a list of options identical to https://github.com/jose-elias-alvarez/null-ls.nvim/blob/main/doc/BUILTINS.md#Configuration
-    command = "prettierd",
-    ---@usage specify which filetypes to enable. By default a providers will attach to all the filetypes it supports.
-    filetypes = { "typescript", "typescriptreact", "vue" },
+    command = "prettier",
+    --   extra_args = { "--print-with", "100" },
+    filetypes = {
+      "typescript",
+      "typescriptreact",
+      "vue",
+      "solidity"
+    },
   },
-  {
-    -- each formatter accepts a list of options identical to https://github.com/jose-elias-alvarez/null-ls.nvim/blob/main/doc/BUILTINS.md#Configuration
-    command = "prettierd",
-    -- args = { "--plugin=prettier-plugin-solidity" },
-    ---@usage specify which filetypes to enable. By default a providers will attach to all the filetypes it supports.
-    filetypes = { "solidity" },
-  },
-  -- { command = "deno_fmt", filetypes = { "typescript" } }
 }
 
 -- -- set additional linters

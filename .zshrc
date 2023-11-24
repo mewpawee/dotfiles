@@ -10,7 +10,8 @@ export PATH=~/.foundry/bin:$PATH
 export PATH=~/.asdf/shims:$PATH
 export PATH=~/.cargo/bin:$PATH
 export PATH=~/.bun/bin:$PATH
-export EDITOR=hx
+export EDITOR=lvim
+# export PRETTIERD_DEFAULT_CONFIG=~/.config/.prettierrc
 # # load zgenom
 # source "${HOME}/.zgenom/zgenom.zsh"
 
