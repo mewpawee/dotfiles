@@ -149,6 +149,13 @@ formatters.setup {
       "typescript",
       "typescriptreact",
       "vue",
+    },
+  },
+  {
+    command = "prettier",
+    --explicit-types=never
+    extra_args = { "--explicit-types=never" },
+    filetypes = {
       "solidity"
     },
   },
