@@ -9,7 +9,6 @@ export PATH=~/.local/bin:$PATH
 export PATH=~/.foundry/bin:$PATH
 export PATH=~/.asdf/shims:$PATH
 export PATH=~/.cargo/bin:$PATH
-export PATH=~/.yarn/bin:$PATH
 export PATH=~/.bun/bin:$PATH
 export EDITOR=hx
 # # load zgenom
@@ -26,12 +25,3 @@ export EDITOR=hx
 #   # generate the init script from plugins above
 #   zgenom save
 # fi
-
-# pnpm
-export PNPM_HOME="/Users/mewpawee/Library/pnpm"
-case ":$PATH:" in
-  *":$PNPM_HOME:"*) ;;
-  *) export PATH="$PNPM_HOME:$PATH" ;;
-esac
-# pnpm end
-export PATH="/opt/homebrew/opt/postgresql@15/bin:$PATH"

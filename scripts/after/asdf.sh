@@ -1,9 +1,6 @@
 #!/bin/bash
 PLUGINS='
 bun
-rust
-solidity
-python
 '
 
 # Add Plugins

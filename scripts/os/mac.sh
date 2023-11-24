@@ -15,7 +15,6 @@ brave-browser
 TERMINAL_PKG='
 font-fira-code-nerd-font
 warp
-fish
 starship
 zellij  
 rectangle

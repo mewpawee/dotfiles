@@ -20,10 +20,10 @@ formatter = { command = 'prettier', args = ["--parser", "solidity-parse"]}
 # indent = { tab-width = 4, unit = "    " }
 # language-server = { command = "nomicfoundation-solidity-language-server", args = ["--stdio"] }
 
-[[grammar]]
-name = "solidity"
+# [[grammar]]
+# name = "solidity"
 # source = { git = "https://github.com/JoranHonig/tree-sitter-solidity", rev = "168020304759ad5d8b4a88a541a699134e3730c5" }
-source = { git = "https://github.com/JoranHonig/tree-sitter-solidity"}
+# source = { git = "https://github.com/JoranHonig/tree-sitter-solidity"}
 
 [language-server.solidity]
 command = "nomicfoundation-solidity-language-server"

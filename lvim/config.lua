@@ -31,7 +31,6 @@ lvim.builtin.treesitter.ensure_installed = {
   -- "solidity",
   "html",
   "vue",
-  "fish",
   "haskell"
 }
 
@@ -70,8 +69,6 @@ local solidity_opts = {
   -- root_dir = util.root_pattern("foundry.toml", "remappings.txt", "package.json")
 }
 require("lvim.lsp.manager").setup("solidity_ls", solidity_opts)
--- require("lvim.lsp.manager").setup("solidity_ls_nomicfoundation", solidity_nomic_opts)
--- require("lvim.lsp.manager").setup("denols", {})
 
 
 -- ---remove a server from the skipped list, e.g. eslint, or emmet_ls. !!Requires `:LvimCacheReset` to take effect!!
@@ -159,7 +156,14 @@ formatters.setup {
     -- each formatter accepts a list of options identical to https://github.com/jose-elias-alvarez/null-ls.nvim/blob/main/doc/BUILTINS.md#Configuration
     command = "prettierd",
     ---@usage specify which filetypes to enable. By default a providers will attach to all the filetypes it supports.
-    filetypes = { "typescript", "typescriptreact", "vue", "solidity" },
+    filetypes = { "typescript", "typescriptreact", "vue" },
+  },
+  {
+    -- each formatter accepts a list of options identical to https://github.com/jose-elias-alvarez/null-ls.nvim/blob/main/doc/BUILTINS.md#Configuration
+    command = "prettierd",
+    -- args = { "--plugin=prettier-plugin-solidity" },
+    ---@usage specify which filetypes to enable. By default a providers will attach to all the filetypes it supports.
+    filetypes = { "solidity" },
   },
   -- { command = "deno_fmt", filetypes = { "typescript" } }
 }
