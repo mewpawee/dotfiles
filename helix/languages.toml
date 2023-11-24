@@ -1,5 +1,6 @@
 [[language]]
 name = "solidity"
+auto-format = true
 scope = "source.sol"
 injection-regex = "^(sol|solidity)$"
 file-types = ["sol"]

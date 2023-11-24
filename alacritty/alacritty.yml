@@ -10,7 +10,7 @@ font:
       family: FiraCode Nerd Font Mono
       style: Italic
   # Point size
-  size: 16
+  size: 14.5
 
 # shell:
 #  program: /opt/homebrew/bin/nu
