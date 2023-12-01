@@ -1,7 +1,8 @@
 #!/bin/sh
 inside_git_repo="$(git rev-parse --is-inside-work-tree 2>/dev/null)"
+staged_files=$(git diff --cached --name-only)
 
-if [ "$inside_git_repo" ]; then
+if [ "$inside_git_repo" ] && [ "$staged_files" ]; then
   echo "inside git repo"
   TYPE=$(gum choose "fix" "feat" "docs" "style" "refactor" "test" "chore" "revert")
   SCOPE=$(gum input --placeholder "scope")
@@ -16,5 +17,5 @@ if [ "$inside_git_repo" ]; then
   # Commit these changes
   gum confirm "Commit changes?" && git commit -m "$SUMMARY" -m "$DESCRIPTION"
 else
-  echo "not in git repo"
+  echo "not in git repo or no staged files"
 fi
