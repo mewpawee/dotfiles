@@ -11,9 +11,16 @@ layout {
     pane_template name="tests_under_files" {
         pane split_direction="horizontal" {
             children
-            pane command="forge" size="30%" {
-                args "test"
-                start_suspended true
+            pane split_direction="Vertical" size="30%" {
+              pane command="bash" name="forge test" {
+                  cwd "~/.config/scripts/foundry"
+                  args "./forge-test.sh"
+                  start_suspended true
+              }
+              pane command="forge" name="forge build" {
+                  args "build"
+                  start_suspended true
+              }
             }
         }
     }
@@ -39,7 +46,9 @@ layout {
         }
     }
     tab name="Anvil"{
-        pane command="anvil" {
+        pane command="bash" name="anvil node" {
+            cwd "~/.config/scripts/foundry"
+            args "./anvil.sh"
             start_suspended true
         }
     }

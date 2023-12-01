@@ -1,0 +1,2 @@
+local:
+mantle: -f https://rpc.mantle.xyz
