@@ -154,7 +154,7 @@ formatters.setup {
   {
     command = "prettier",
     --explicit-types=never
-    extra_args = { "--explicit-types=never" },
+    extra_args = { "--explicit-types=never", "--prose-wrap=preserve" },
     filetypes = {
       "solidity"
     },
