@@ -17,11 +17,17 @@ if true then
       opts = {
         formatters_by_ft = {
           ["solidity"] = { "forge" },
+          ["rust"] = { "leptos_fmt" },
         },
         formatters = {
           forge = {
             command = "forge",
             args = { "fmt", "$FILENAME" },
+            stdin = false,
+          },
+          leptos_fmt = {
+            command = "leptosfmt",
+            args = { "$FILENAME" },
             stdin = false,
           },
         },
