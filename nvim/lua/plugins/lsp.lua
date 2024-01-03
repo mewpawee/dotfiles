@@ -4,10 +4,11 @@ if true then
       "williamboman/mason.nvim",
       opts = {
         ensure_installed = {
+          -- "pyright",
+          -- "black",
           "stylua",
           "shellcheck",
           "shfmt",
-          "flake8",
           "nomicfoundation-solidity-language-server",
         },
       },
@@ -18,6 +19,7 @@ if true then
         formatters_by_ft = {
           ["solidity"] = { "forge" },
           ["rust"] = { "leptos_fmt" },
+          -- ["python"] = { "black" },
         },
         formatters = {
           forge = {
