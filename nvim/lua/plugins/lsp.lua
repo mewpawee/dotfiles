@@ -1,11 +1,10 @@
 if true then
   return {
+    -- add mason pre-installed plugins
     {
       "williamboman/mason.nvim",
       opts = {
         ensure_installed = {
-          -- "pyright",
-          -- "black",
           "stylua",
           "shellcheck",
           "shfmt",
@@ -13,13 +12,13 @@ if true then
         },
       },
     },
+    -- add formatters
     {
       "stevearc/conform.nvim",
       opts = {
         formatters_by_ft = {
           ["solidity"] = { "forge" },
           ["rust"] = { "leptos_fmt" },
-          -- ["python"] = { "black" },
         },
         formatters = {
           forge = {
