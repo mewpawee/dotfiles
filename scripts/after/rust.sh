@@ -1,8 +1,6 @@
-#cargo packages
-cargo install cargo-leptos
-cargo install cargofmt
+#!/bin/sh
 
-# for leptos
-rustup toolchain install nightly
-rustup default nightly
-rustup target add wasm32-unknown-unknown
+# Install rustup
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+# Install Foundry-rs
+curl -L https://foundry.paradigm.xyz | sh
