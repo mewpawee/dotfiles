@@ -11,11 +11,11 @@ require("lazy").setup({
     -- add LazyVim and import its plugins
     { "LazyVim/LazyVim", import = "lazyvim.plugins" },
     -- import any extras modules here
-    { import = "lazyvim.plugins.extras.vscode" },
-    { import = "lazyvim.plugins.extras.lang.python" },
-    { import = "lazyvim.plugins.extras.lang.rust" },
-    { import = "lazyvim.plugins.extras.lang.typescript" },
-    { import = "lazyvim.plugins.extras.lang.json" },
+    -- { import = "lazyvim.plugins.extras.vscode" },
+    -- { import = "lazyvim.plugins.extras.lang.python" },
+    -- { import = "lazyvim.plugins.extras.lang.rust" },
+    -- { import = "lazyvim.plugins.extras.lang.typescript" },
+    -- { import = "lazyvim.plugins.extras.lang.json" },
     -- import/override with your plugins
     { import = "plugins" },
   },
@@ -46,3 +46,6 @@ require("lazy").setup({
     },
   },
 })
+
+-- highlight current line number
+vim.api.nvim_set_hl(0, "CursorLineNr", { fg = "#FF77BB", bold = true })
