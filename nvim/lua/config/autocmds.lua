@@ -10,3 +10,11 @@ vim.api.nvim_create_autocmd("FileType", {
     vim.opt.conceallevel = 0
   end,
 })
+
+-- Comment code for solidity
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = { "solidity" },
+  callback = function(ev)
+    vim.bo[ev.buf].commentstring = "// %s"
+  end,
+})
