@@ -12,3 +12,10 @@ style = "Italic"
 [font.normal]
 family = "FiraCode Nerd Font Mono"
 style = "Regular"
+
+[window]
+# - { key: Subtract, mods: Control, action: DecreaseFontSize             }
+opacity = 0.9
+
+# [keyboard]
+# bindings = [{ key = "-", mods = "Control", action = "None" }]
