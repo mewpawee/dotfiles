@@ -9,6 +9,7 @@ if true then
           "shellcheck",
           "shfmt",
           "nomicfoundation-solidity-language-server",
+          "black",
         },
       },
     },
@@ -19,6 +20,7 @@ if true then
         formatters_by_ft = {
           ["solidity"] = { "forge" },
           ["rust"] = { "leptos_fmt" },
+          ["python"] = { "black" },
         },
         formatters = {
           forge = {
