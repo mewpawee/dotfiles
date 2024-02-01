@@ -15,9 +15,3 @@ keymap.set("n", "<C-s>", ":w<Return>")
 
 -- New tab
 keymap.set("n", "te", ":tabedit<Return>")
-
--- Move Line
---- move line up
-keymap.set("n", "<C-k>", "ddkP")
---- move line down
-keymap.set("n", "<C-j>", "ddp")

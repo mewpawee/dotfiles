@@ -16,6 +16,7 @@ style = "Regular"
 [window]
 # - { key: Subtract, mods: Control, action: DecreaseFontSize             }
 opacity = 0.9
+option_as_alt = "OnlyLeft"
 
 # [keyboard]
 # bindings = [{ key = "-", mods = "Control", action = "None" }]
