@@ -1,0 +1,7 @@
+zsh-users/zsh-completions
+belak/zsh-utils path:completion
+
+# popular fish-like plugins
+zsh-users/zsh-autosuggestions
+zdharma-continuum/fast-syntax-highlighting kind:defer
+zsh-users/zsh-history-substring-search
