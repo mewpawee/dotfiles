@@ -10,6 +10,8 @@ if true then
           "shfmt",
           "nomicfoundation-solidity-language-server",
           "black",
+          "codelldb",
+          "astro-language-server",
         },
       },
     },
