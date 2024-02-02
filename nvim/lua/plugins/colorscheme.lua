@@ -3,19 +3,20 @@ if true then
     -- add catppuccin
     {
       "catppuccin/nvim",
-      config = function()
-        require("catppuccin").setup({
-          -- configurations
-          flavour = "frappe",
-        })
-      end,
+      -- priority = 1000,
+      -- config = function()
+      --   require("catppuccin").setup({
+      --     -- configurations
+      --     flavour = "frappe",
+      --   })
+      -- end,
     },
 
     -- Configure LazyVim to load catppuccin
     {
       "LazyVim/LazyVim",
       opts = {
-        colorscheme = "catppuccin",
+        colorscheme = "catppuccin-frappe",
       },
     },
   }
