@@ -15,3 +15,7 @@ keymap.set("n", "<C-s>", ":w<Return>")
 
 -- New tab
 keymap.set("n", "te", ":tabedit<Return>")
+
+-- Move tab position to the left or right
+keymap.set("n", "<A-h>", ":BufferLineMovePrev<Return>")
+keymap.set("n", "<A-l>", ":BufferLineMoveNext<Return>")
