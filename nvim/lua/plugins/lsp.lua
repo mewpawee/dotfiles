@@ -9,6 +9,7 @@ if true then
           "shellcheck",
           "shfmt",
           "nomicfoundation-solidity-language-server",
+          -- "vscode-solidity-server",
           "black",
           "codelldb",
           "astro-language-server",
