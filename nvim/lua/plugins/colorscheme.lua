@@ -2,7 +2,10 @@ if true then
   return {
     -- add catppuccin
     {
-      "catppuccin/nvim",
+      "catppuccin",
+      opts = {
+        transparent_background = false, -- toggle transparent background
+      },
     },
 
     -- Configure LazyVim to load catppuccin
