@@ -4,7 +4,7 @@ if true then
     {
       "catppuccin",
       opts = {
-        transparent_background = false, -- toggle transparent background
+        transparent_background = true, -- toggle transparent background
       },
     },
 

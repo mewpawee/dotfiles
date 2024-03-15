@@ -14,11 +14,12 @@ export PATH=~/.foundry/bin:$PATH
 export PATH=~/.asdf/shims:$PATH
 export PATH=~/.cargo/bin:$PATH
 export PATH=~/.bun/bin:$PATH
-export PATH="$PATH:/Users/mewpawee/.huff/bin"
-export PATH="/opt/homebrew/opt/postgresql@15/bin:$PATH"
+export PATH=/opt/homebrew/opt/postgresql@15/bin:$PATH
+export XDG_CONFIG_HOME=~/.config
 
 # Default Text Editor
 export EDITOR=nvim
+export VISUAL=$EDITOR
 
 # using antidote: https://getantidote.github.io/
 # source antidote
