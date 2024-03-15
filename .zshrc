@@ -15,7 +15,6 @@ export PATH=~/.asdf/shims:$PATH
 export PATH=~/.cargo/bin:$PATH
 export PATH=~/.bun/bin:$PATH
 export PATH=/opt/homebrew/opt/postgresql@15/bin:$PATH
-export XDG_CONFIG_HOME=~/.config
 
 # Default Text Editor
 export EDITOR=nvim
