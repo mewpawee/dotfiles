@@ -10,7 +10,6 @@ if true then
           "shfmt",
           "nomicfoundation-solidity-language-server",
           -- "vscode-solidity-server",
-          "black",
           "codelldb",
           "astro-language-server",
         },
@@ -23,7 +22,6 @@ if true then
         formatters_by_ft = {
           ["solidity"] = { "forge" },
           ["rust"] = { "leptos_fmt" },
-          ["python"] = { "black" },
         },
         formatters = {
           forge = {
