@@ -17,7 +17,8 @@ export PATH=~/.bun/bin:$PATH
 export PATH=/opt/homebrew/opt/postgresql@15/bin:$PATH
 
 # Default Text Editor
-export EDITOR=nvim
+# export EDITOR=nvim
+export EDITOR=hx
 export VISUAL=$EDITOR
 
 # using antidote: https://getantidote.github.io/
