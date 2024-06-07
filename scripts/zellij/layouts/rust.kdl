@@ -1,17 +1,32 @@
 layout {
-    pane split_direction="vertical" {
-        pane edit="src/main.rs"
+    /* Tab template */
+    default_tab_template {
+        pane size=1 borderless=true {
+            plugin location="zellij:tab-bar"
+        }
+        children
+        pane size=2 borderless=true {
+            plugin location="zellij:status-bar"
+        }
+    }
+
+    /* Cargo Template*/
+    pane_template name="cargo" {
+        command "cargo"
+        start_suspended true
+    }
+
+    /* Main Editor */
+    tab name="Editor" focus=true {
+        pane command="yazi"
+    }
+
+    /* Cargo Tools */
+    tab name="Cargo" {
         pane split_direction="horizontal" {
             cargo { args "check"; }
             cargo { args "run"; }
             cargo { args "test"; }
         }
-    }
-    pane size=1 borderless=true {
-        plugin location="zellij:compact-bar"
-    }
-    pane_template name="cargo" {
-        command "cargo"
-        start_suspended true
     }
 }

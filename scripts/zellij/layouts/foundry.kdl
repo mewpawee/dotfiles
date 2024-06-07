@@ -24,7 +24,8 @@ layout {
             }
         }
     }
-    tab_template name="strider_tab" {
+
+    tab_template name="main_editor" {
         pane size=1 borderless=true {
             plugin location="zellij:tab-bar"
         }
@@ -39,14 +40,18 @@ layout {
             plugin location="zellij:status-bar"
         }
     }
-    strider_tab name="Editor" focus=true {
-        tests_under_files split_direction="vertical" {
-            pane edit="."
-            //pane edit="."
+
+    tab name="Editor" focus=true {
+      pane command="nvim" {
+          args "."
+        }
+      pane split_direction="horizontal"{
+          tests_under_files
         }
     }
+
     tab name="Anvil"{
-        pane command="bash" name="anvil node" {
+        pane command="zsh" name="anvil node" {
             cwd "~/.config/scripts/foundry"
             args "./anvil.sh"
             start_suspended true
