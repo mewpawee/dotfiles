@@ -8,7 +8,6 @@ if true then
           "stylua",
           "shellcheck",
           "shfmt",
-          -- "nomicfoundation-solidity-language-server",
           "vscode-solidity-server",
           "codelldb",
           "astro-language-server",
