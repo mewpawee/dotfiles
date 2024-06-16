@@ -1,13 +1,16 @@
 # Solidity
 [[language]]
 name = "solidity"
-auto-format = true
+auto-format = false
 scope = "source.sol"
 injection-regex = "^(sol|solidity)$"
 file-types = ["sol"]
 comment-token = "//"
 language-servers = ["solidity"]
-formatter = { command = 'bash', args = ["-c", "echo $FILENAME"], stdin = false }
+# formatter = { command = 'zsh', args = ["-c", "echo $FILENAME"], stdin = false }
+# formatter = { command = 'forge', args = ["fmt", "$filename"], stdin = false }
+# formatter = { command = 'forge', args = ["fmt", "-"], stdin = false }
+formatter = { command = 'forge', args = ["fmt", "$(pwd)"], stdin = true }
 
 [language-server.solidity]
 command = "vscode-solidity-server"

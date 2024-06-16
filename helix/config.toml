@@ -18,7 +18,15 @@ select = "underline"
 [editor.statusline]
 left = ["mode", "spinner"]
 center = ["file-name"]
-right = ["diagnostics","file-encoding", "file-line-ending","file-type","position"]
+right = [
+  "version-control",
+  "diagnostics",
+  "file-encoding",
+  "file-line-ending",
+  "file-type",
+  "position",
+]
+
 # separator = "|"
 mode.normal = "NORMAL"
 mode.insert = "INSERT"
@@ -32,12 +40,19 @@ character = "▏" # Some characters that work well: "▏","╎", "┆", "┊", "
 [editor.lsp]
 # better be a toggle
 display-inlay-hints = true
+# Show LSP messages in the status line
+display-messages = true
 
 [keys.normal]
 # move line down
 C-j = ["extend_to_line_bounds", "delete_selection", "paste_after"]
 # move line up
-C-k = ["extend_to_line_bounds", "delete_selection", "move_line_up", "paste_before"]
+C-k = [
+  "extend_to_line_bounds",
+  "delete_selection",
+  "move_line_up",
+  "paste_before",
+]
 #esc = ["collapse_selection", "keep_primary_selection"]
 
 [keys.normal.space]

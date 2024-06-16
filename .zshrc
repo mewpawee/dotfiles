@@ -27,3 +27,6 @@ source $(brew --prefix)/opt/antidote/share/antidote/antidote.zsh
 
 # initialize plugins statically with ${ZDOTDIR:-~}/.zsh_plugins.txt
 antidote load
+
+# bun completions
+[ -s "/Users/mewpawee/.bun/_bun" ] && source "/Users/mewpawee/.bun/_bun"

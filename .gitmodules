@@ -1,0 +1,6 @@
+[submodule "yazi"]
+	path = yazi
+	url = git@github.com:luccahuguet/yazi-files.git
+[submodule "zellij"]
+	path = zellij
+	url = git@github.com:luccahuguet/zellij-files.git

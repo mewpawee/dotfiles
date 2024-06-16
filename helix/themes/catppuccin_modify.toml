@@ -3,8 +3,10 @@ inherits = "catppuccin_frappe"
 # "ui.statusline.inactive" = { fg = "gray" }
 # "ui.statusline" = { fg = "rosegold" }
 
+# background
+"ui.background" = {}
 # Line number, selected color
-# "ui.linenr.selected" = "persianpink"
+"ui.linenr.selected" = "persianpink"
 
 # "comment" = { fg = "grey-comment", modifiers = ["italic"] }
 
