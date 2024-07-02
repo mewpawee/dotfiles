@@ -8,7 +8,7 @@ local keymap = vim.keymap
 keymap.set("n", "U", "<C-r>")
 
 -- Select all
-keymap.set("n", "<C-a>", "gg<S-v>G")
+-- keymap.set("n", "<C-A>", "gg<S-v>G")
 
 -- Save & Format
 keymap.set("n", "<C-s>", ":w<Return>")
