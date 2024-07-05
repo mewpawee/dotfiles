@@ -20,3 +20,4 @@ args = ["--stdio"]
 [[language]]
 name = "rust"
 formatter = { command = "leptosfmt", args = ["--stdin", "--rustfmt"] }
+ 
