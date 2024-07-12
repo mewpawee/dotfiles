@@ -19,18 +19,6 @@ $time\
 $line_break\
 $character"""
 
-############ Only use for WARP #############
-# [fill]
-# disabled = true
-
-[line_break]
-disabled = true
-
-[character]
-success_symbol = ""
-error_symbol = ""
-############ Only use for WARP #############
-
 [os]
 format = "[ $symbol ]($style)"
 style = "bg:#a3aed2 fg:#090c0c"

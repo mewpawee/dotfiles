@@ -127,3 +127,5 @@ lvim/plugin/packer_compiled.lua
 configstore
 truffle/
 habitipy/
+
+zed/
