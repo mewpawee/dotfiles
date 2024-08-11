@@ -30,3 +30,11 @@ antidote load
 
 # bun completions
 [ -s "/Users/mewpawee/.bun/_bun" ] && source "/Users/mewpawee/.bun/_bun"
+
+# pnpm
+export PNPM_HOME="/Users/paweetantivasdakarn/Library/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end

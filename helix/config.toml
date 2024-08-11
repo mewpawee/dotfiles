@@ -19,12 +19,12 @@ select = "underline"
 left = ["mode", "spinner"]
 center = ["file-name"]
 right = [
-  "version-control",
-  "diagnostics",
-  "file-encoding",
-  "file-line-ending",
-  "file-type",
-  "position",
+    "version-control",
+    "diagnostics",
+    "file-encoding",
+    "file-line-ending",
+    "file-type",
+    "position",
 ]
 
 # separator = "|"
@@ -45,19 +45,20 @@ display-messages = true
 
 [keys.normal]
 # move line down
-C-j = ["extend_to_line_bounds", "delete_selection", "paste_after"]
+A-j = ["extend_to_line_bounds", "delete_selection", "paste_after"]
 # move line up
-C-k = [
-  "extend_to_line_bounds",
-  "delete_selection",
-  "move_line_up",
-  "paste_before",
+A-k = [
+    "extend_to_line_bounds",
+    "delete_selection",
+    "move_line_up",
+    "paste_before",
 ]
 H = ":buffer-next"
 L = ":buffer-previous"
 #esc = ["collapse_selection", "keep_primary_selection"]
 
 [keys.normal.space]
-c = ":buffer-close"
+i = ":toggle lsp.display-inlay-hints"
+# c = ":buffer-close"
 C-g = [":new", ":insert-output lazygit", ":redraw", "jump_backward"]
-C-e = ":sh zellij run -f -x 10% -y 10% --width 80% --height 80% -- bash ~/.config/helix/yazi-picker.sh"
+e = ":sh zellij run -f -x 10% -y 10% --width 80% --height 80% -- bash ~/.config/helix/yazi-picker.sh"

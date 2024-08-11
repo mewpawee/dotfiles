@@ -2,6 +2,7 @@ inherits = "catppuccin_frappe"
 # Buffer line color
 # "ui.statusline.inactive" = { fg = "gray" }
 # "ui.statusline" = { fg = "rosegold" }
+"ui.virtual.inlay-hint" = { fg = "#685370" }
 
 # background
 "ui.background" = {}
