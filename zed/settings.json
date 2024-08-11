@@ -19,5 +19,5 @@
     "dark": "Catppuccin Frappé"
   },
   "vim_mode": true,
-  "relative_line_numbers": true
+  "relative_line_numbers": true,
 }

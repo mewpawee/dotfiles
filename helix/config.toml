@@ -57,6 +57,9 @@ H = ":buffer-next"
 L = ":buffer-previous"
 #esc = ["collapse_selection", "keep_primary_selection"]
 
+# vim key bindings
+G = "goto_last_line"
+
 [keys.normal.space]
 i = ":toggle lsp.display-inlay-hints"
 # c = ":buffer-close"
