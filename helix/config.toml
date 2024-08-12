@@ -15,6 +15,9 @@ insert = "bar"
 normal = "block"
 select = "underline"
 
+[editor.file-picker]
+hidden = false
+
 [editor.statusline]
 left = ["mode", "spinner"]
 center = ["file-name"]
@@ -53,8 +56,8 @@ A-k = [
     "move_line_up",
     "paste_before",
 ]
-H = ":buffer-next"
-L = ":buffer-previous"
+L = ":buffer-next"
+H = ":buffer-previous"
 #esc = ["collapse_selection", "keep_primary_selection"]
 
 # vim key bindings
@@ -63,5 +66,5 @@ G = "goto_last_line"
 [keys.normal.space]
 i = ":toggle lsp.display-inlay-hints"
 # c = ":buffer-close"
-C-g = [":new", ":insert-output lazygit", ":redraw", "jump_backward"]
+A-g = [":new", ":insert-output lazygit", ":redraw", "jump_backward"]
 e = ":sh zellij run -f -x 10% -y 10% --width 80% --height 80% -- bash ~/.config/helix/yazi-picker.sh"
