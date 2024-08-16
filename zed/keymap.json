@@ -17,7 +17,7 @@
     "context": "Workspace",
     "bindings": {
       // "shift shift": "file_finder::Toggle"
-      "space f": "file_finder::Toggle"
+      // "space f": "file_finder::Toggle"
     }
   },
   {

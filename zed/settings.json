@@ -10,8 +10,8 @@
   // "features": {
   //   "inline_completion_provider": "none"
   // },
-  "ui_font_size": 16,
-  "buffer_font_size": 16,
+  "ui_font_size": 14,
+  "buffer_font_size": 14,
   "buffer_font_family": "FiraCode Nerd Font Mono",
   "theme": {
     "mode": "system",
@@ -19,5 +19,5 @@
     "dark": "Catppuccin Frappé"
   },
   "vim_mode": true,
-  "relative_line_numbers": true,
+  "relative_line_numbers": true
 }
