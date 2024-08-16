@@ -21,3 +21,8 @@ args = ["--stdio"]
 name = "rust"
 formatter = { command = "leptosfmt", args = ["--stdin", "--rustfmt"] }
  
+# GO
+[[language]]
+name = "go"
+auto-format = false
+formatter = { command = "goimports" }
