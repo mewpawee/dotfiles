@@ -7,6 +7,31 @@
 // from the command palette.
 [
   {
+    "context": "Editor && (vim_mode == normal || vim_mode == visual) && !VimWaiting && !menu",
+    "bindings": {}
+  },
+  {
+    "context": "Editor && vim_mode == normal && !VimWaiting && !menu",
+    "bindings": {
+      // put key-bindings here if you want them to work only in normal mode
+      // Window movement bindings
+      // Ctrl jklk to move between panes
+      "ctrl-h": ["workspace::ActivatePaneInDirection", "Left"],
+      "ctrl-l": ["workspace::ActivatePaneInDirection", "Right"],
+      "ctrl-k": ["workspace::ActivatePaneInDirection", "Up"],
+      "ctrl-j": ["workspace::ActivatePaneInDirection", "Down"],
+
+      // + Buffers
+      // Switch between buffers
+      "shift-h": "pane::ActivatePrevItem",
+      "shift-l": "pane::ActivateNextItem",
+      // File finder
+      "space f": "file_finder::Toggle"
+      // Search word under cursor
+      // "space s w": "pane::DeploySearch"
+    }
+  },
+  {
     "context": "VimControl && !menu",
     "bindings": {
       // put key-bindings here if you want them to work in normal & visual mode
@@ -18,6 +43,8 @@
     "bindings": {
       // "shift shift": "file_finder::Toggle"
       // "space f": "file_finder::Toggle"
+      // Toggle terminal
+      "ctrl-\\": "terminal_panel::ToggleFocus"
     }
   },
   {
