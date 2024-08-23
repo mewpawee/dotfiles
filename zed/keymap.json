@@ -12,7 +12,9 @@
       // Toggle inlay hints
       "space i": "editor::ToggleInlayHints",
       // Search word under cursor
-      "space s w": "pane::DeploySearch"
+      "space s w": "pane::DeploySearch",
+      // toggle comment
+      "ctrl-c": "editor::ToggleComments"
     }
   },
   {
