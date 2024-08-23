@@ -8,7 +8,12 @@
 [
   {
     "context": "Editor && (vim_mode == normal || vim_mode == visual) && !VimWaiting && !menu",
-    "bindings": {}
+    "bindings": {
+      // Toggle inlay hints
+      "space i": "editor::ToggleInlayHints",
+      // Search word under cursor
+      "space s w": "pane::DeploySearch"
+    }
   },
   {
     "context": "Editor && vim_mode == normal && !VimWaiting && !menu",
@@ -21,6 +26,10 @@
       "ctrl-k": ["workspace::ActivatePaneInDirection", "Up"],
       "ctrl-j": ["workspace::ActivatePaneInDirection", "Down"],
 
+      // +LSP
+      // Symbol search
+      "s s": "outline::Toggle",
+
       // + Buffers
       // Switch between buffers
       "shift-h": "pane::ActivatePrevItem",
@@ -29,6 +38,16 @@
       "space f": "file_finder::Toggle"
       // Search word under cursor
       // "space s w": "pane::DeploySearch"
+    }
+  },
+  // Empty pane, set of keybindings that are available when there is no active editor
+  {
+    "context": "EmptyPane || SharedScreen",
+    "bindings": {
+      // Open file finder
+      "space f": "file_finder::Toggle"
+      // Open recent project
+      // "space f p": "projects::OpenRecent"
     }
   },
   {

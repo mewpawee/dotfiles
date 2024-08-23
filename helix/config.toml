@@ -1,4 +1,3 @@
-# theme = "tokyonight_modify"
 theme = "catppuccin_modify"
 
 [editor]
@@ -37,7 +36,6 @@ mode.select = "SELECT"
 
 [editor.indent-guides]
 render = true
-# character = "╎" # Some characters that work well: "▏","╎", "┆", "┊", "⸽"
 character = "▏" # Some characters that work well: "▏","╎", "┆", "┊", "⸽"
 
 [editor.lsp]

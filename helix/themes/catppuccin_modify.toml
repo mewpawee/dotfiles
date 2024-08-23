@@ -1,7 +1,5 @@
 inherits = "catppuccin_frappe"
 # Buffer line color
-# "ui.statusline.inactive" = { fg = "gray" }
-# "ui.statusline" = { fg = "rosegold" }
 "ui.virtual.inlay-hint" = { fg = "#685370" }
 
 # background
@@ -9,16 +7,6 @@ inherits = "catppuccin_frappe"
 # Line number, selected color
 "ui.linenr.selected" = "persianpink"
 
-# "comment" = { fg = "grey-comment", modifiers = ["italic"] }
-
 # Override colors in the palette:
 [palette]
 persianpink = "#FF77BB"
-# rosegold = "#b76e79"
-# lightslategray = '#708090'
-# lightmagenta = "#FF77FF"
-# white = "#ffffff"
-# bossanova = "#452859"
-# red = "#ff0000"
-# background_highlight = "#30374b"
-# grey-comment = "#685370"
