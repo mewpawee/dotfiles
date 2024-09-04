@@ -6,6 +6,7 @@
 // To see the default key bindings run `zed: Open Default Keymap`
 // from the command palette.
 [
+  // normal vim mode & visual
   {
     "context": "Editor && (vim_mode == normal || vim_mode == visual) && !VimWaiting && !menu",
     "bindings": {
@@ -17,10 +18,12 @@
       "ctrl-c": "editor::ToggleComments"
     }
   },
+  // normal vim mode
   {
     "context": "Editor && vim_mode == normal && !VimWaiting && !menu",
     "bindings": {
-      // put key-bindings here if you want them to work only in normal mode
+      // redo
+      "U": "vim::Redo",
       // Window movement bindings
       // Ctrl jklk to move between panes
       "ctrl-h": ["workspace::ActivatePaneInDirection", "Left"],
@@ -29,6 +32,8 @@
       "ctrl-j": ["workspace::ActivatePaneInDirection", "Down"],
 
       // +LSP
+      // split on lookup definition
+      "g D": "editor::GoToDefinitionSplit",
       // Symbol search
       "s s": "outline::Toggle",
 
@@ -37,9 +42,13 @@
       "shift-h": "pane::ActivatePrevItem",
       "shift-l": "pane::ActivateNextItem",
       // File finder
-      "space f": "file_finder::Toggle"
-      // Search word under cursor
-      // "space s w": "pane::DeploySearch"
+      "space f": "file_finder::Toggle",
+      // Close active panel
+      "space b d": "pane::CloseActiveItem",
+      // Close other items
+      "space b o": "pane::CloseInactiveItems",
+      // Show project panel with current file
+      "space e": "pane::RevealInProjectPanel"
     }
   },
   // Empty pane, set of keybindings that are available when there is no active editor
@@ -48,30 +57,39 @@
     "bindings": {
       // Open file finder
       "space f": "file_finder::Toggle"
-      // Open recent project
-      // "space f p": "projects::OpenRecent"
     }
   },
-  {
-    "context": "VimControl && !menu",
-    "bindings": {
-      // put key-bindings here if you want them to work in normal & visual mode
-      "U": "vim::Redo"
-    }
-  },
+  // Workspace
   {
     "context": "Workspace",
     "bindings": {
-      // "shift shift": "file_finder::Toggle"
-      // "space f": "file_finder::Toggle"
       // Toggle terminal
       "ctrl-\\": "terminal_panel::ToggleFocus"
     }
   },
+  // Terminal
   {
-    "context": "Editor",
+    "context": "Terminal",
     "bindings": {
-      // "j k": ["workspace::SendKeystrokes", "escape"]
+      // move back to file
+      "ctrl-k": "terminal_panel::ToggleFocus"
+    }
+  },
+  // File panel (netrw)
+  {
+    "context": "ProjectPanel && not_editing",
+    "bindings": {
+      // move back to file
+      "ctrl-l": "project_panel::ToggleFocus",
+      "space e": "workspace::ToggleLeftDock",
+      // file &folder operations
+      "a": "project_panel::NewFile",
+      "A": "project_panel::NewDirectory",
+      "r": "project_panel::Rename",
+      "d": "project_panel::Delete",
+      "x": "project_panel::Cut",
+      "c": "project_panel::Copy",
+      "p": "project_panel::Paste"
     }
   }
 ]
