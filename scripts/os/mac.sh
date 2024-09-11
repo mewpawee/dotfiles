@@ -4,7 +4,6 @@ homebrew/cask-fonts
 '
 
 EDITOR_PKG='
-neovim
 helix
 libusb
 '
@@ -12,6 +11,7 @@ libusb
 BROWSER_PKG='
 brave-browser
 '
+
 TERMINAL_PKG='
 font-fira-code-nerd-font
 warp
@@ -30,7 +30,7 @@ rectangle
 # zoxide - directory jumping
 UTILITY_PKG='
 bat
-exa
+lsd
 git-delta
 z
 rm-improved
@@ -48,13 +48,10 @@ zoxide
 CODING_PKG='
 asdf
 gpg
-tmux
 bash
 '
 
 GENERAL_PKG='
-notion
-logseq
 bitwarden
 discord
 spotify

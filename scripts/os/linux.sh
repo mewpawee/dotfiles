@@ -1,7 +1,7 @@
 # APT packages
 packages="
 bat
-exa
+lsd
 "
 
 echo "Install apt packages"
