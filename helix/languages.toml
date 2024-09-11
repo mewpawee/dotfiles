@@ -7,10 +7,7 @@ injection-regex = "^(sol|solidity)$"
 file-types = ["sol"]
 comment-token = "//"
 language-servers = ["solidity"]
-# formatter = { command = 'zsh', args = ["-c", "echo $FILENAME"], stdin = false }
-# formatter = { command = 'forge', args = ["fmt", "$filename"], stdin = false }
-# formatter = { command = 'forge', args = ["fmt", "-"], stdin = false }
-formatter = { command = 'forge', args = ["fmt", "$(pwd)"], stdin = true }
+formatter = { command = 'forge', args = ["fmt", "-r","-"], stdin = true }
 
 [language-server.solidity]
 command = "vscode-solidity-server"

@@ -19,5 +19,18 @@
     "dark": "Catppuccin Frappé"
   },
   "vim_mode": true,
-  "relative_line_numbers": true
+  "relative_line_numbers": true,
+  // language specific settings
+  "languages": {
+    "Solidity": {
+      "formatter": [
+        {
+          "external": {
+            "command": "forge",
+            "arguments": ["fmt", "-r", "-"]
+          }
+        }
+      ]
+    }
+  }
 }
