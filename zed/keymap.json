@@ -64,7 +64,7 @@
     "context": "Workspace",
     "bindings": {
       // Toggle terminal
-      "ctrl-\\": "terminal_panel::ToggleFocus"
+      // "ctrl-\\": "terminal_panel::ToggleFocus"
     }
   },
   // Terminal
@@ -72,7 +72,11 @@
     "context": "Terminal",
     "bindings": {
       // move back to file
-      "ctrl-k": "terminal_panel::ToggleFocus"
+      "ctrl-k": "terminal_panel::ToggleFocus",
+      "ctrl-t": "workspace::NewTerminal",
+      // Switch between buffers
+      "ctrl-h": "pane::ActivatePrevItem",
+      "ctrl-l": "pane::ActivateNextItem"
     }
   },
   // File panel (netrw)
