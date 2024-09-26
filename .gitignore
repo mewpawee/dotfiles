@@ -136,3 +136,4 @@ github-copilot/
 # Zed
 zed/embeddings/**/*.mdb
 zed/prompts/**/*.mdb
+zed/*.tmp*
