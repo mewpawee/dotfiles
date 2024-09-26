@@ -7,6 +7,16 @@
 // custom settings, run the `zed: Open Default Settings` command
 // from the command palette
 {
+  "telemetry": {
+    "metrics": false
+  },
+  "assistant": {
+    "default_model": {
+      "provider": "copilot_chat",
+      "model": "gpt-4o"
+    },
+    "version": "2"
+  },
   "ui_font_size": 14,
   "buffer_font_size": 14,
   "buffer_font_family": "FiraCode Nerd Font Mono",
@@ -35,7 +45,7 @@
             "command": "prettier",
             "arguments": [
               "--plugin=prettier-plugin-solidity",
-              "--stdin-file-path",
+              "--stdin-filepath",
               "{buffer_path}"
             ]
           }
