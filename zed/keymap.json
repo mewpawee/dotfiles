@@ -62,10 +62,7 @@
   // Workspace
   {
     "context": "Workspace",
-    "bindings": {
-      // Toggle terminal
-      // "ctrl-\\": "terminal_panel::ToggleFocus"
-    }
+    "bindings": {}
   },
   // Terminal
   {
