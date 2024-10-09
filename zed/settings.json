@@ -36,18 +36,34 @@
   },
   // language specific settings
   "languages": {
+    // "Python": {
+    //   "format_on_save": {
+    //     "external": {
+    //       "command": "/opt/homebrew/bin/black",
+    //       "arguments": ["-"]
+    //       // "arguments": ["-", "--line-length", "80"]
+    //     }
+    //   }
+    // },
     "Solidity": {
       "formatter": [
+        // {
+        //   "external": {
+        //     "command": "forge",
+        //     "arguments": ["fmt", "-r", "-"]
+        //   }
+        // },
+        // "prettier",
         {
           "external": {
-            "command": "forge",
-            "arguments": ["fmt", "-r", "-"]
-            // "command": "prettier",
-            // "arguments": [
-            //   "--plugin=prettier-plugin-solidity",
-            //   "--stdin-filepath",
-            //   "{buffer_path}"
-            // ]
+            "command": "prettier",
+            "arguments": [
+              "--plugin=prettier-plugin-solidity",
+              "--stdin-filepath",
+              "{buffer_path}"
+            ]
+            // "command": "forge",
+            // "arguments": ["fmt", "-r", "-"]
           }
         }
       ]
