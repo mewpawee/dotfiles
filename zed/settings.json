@@ -47,25 +47,23 @@
     // },
     "Solidity": {
       "formatter": [
-        // {
-        //   "external": {
-        //     "command": "forge",
-        //     "arguments": ["fmt", "-r", "-"]
-        //   }
-        // },
-        // "prettier",
         {
           "external": {
-            "command": "prettier",
-            "arguments": [
-              "--plugin=prettier-plugin-solidity",
-              "--stdin-filepath",
-              "{buffer_path}"
-            ]
-            // "command": "forge",
-            // "arguments": ["fmt", "-r", "-"]
+            "command": "forge",
+            "arguments": ["fmt", "-r", "-"]
           }
         }
+        // "prettier",
+        // {
+        //   "external": {
+        //     "command": "prettier",
+        //     "arguments": [
+        //       "--plugin=prettier-plugin-solidity",
+        //       "--stdin-filepath",
+        //       "{buffer_path}"
+        //     ]
+        //   }
+        // }
       ]
     }
   }

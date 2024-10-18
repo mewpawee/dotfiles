@@ -17,6 +17,9 @@ args = ["--stdio"]
 [[language]]
 name = "rust"
 formatter = { command = "leptosfmt", args = ["--stdin", "--rustfmt"] }
+
+[language-server.rust-analyzer.config.check]
+command = "clippy"
  
 # GO
 [[language]]
