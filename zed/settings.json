@@ -36,15 +36,15 @@
   },
   // language specific settings
   "languages": {
-    // "Python": {
-    //   "format_on_save": {
-    //     "external": {
-    //       "command": "/opt/homebrew/bin/black",
-    //       "arguments": ["-"]
-    //       // "arguments": ["-", "--line-length", "80"]
-    //     }
-    //   }
-    // },
+    "Python": {
+      "format_on_save": {
+        "external": {
+          "command": "black",
+          "arguments": ["-"]
+          // "arguments": ["-", "--line-length", "80"]
+        }
+      }
+    },
     "Solidity": {
       "formatter": [
         {
