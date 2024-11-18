@@ -10,12 +10,13 @@
   {
     "context": "Editor && (vim_mode == normal || vim_mode == visual) && !VimWaiting && !menu",
     "bindings": {
-      // Toggle inlay hints
-      "space i": "editor::ToggleInlayHints",
-      // Search word under cursor
-      "space s w": "pane::DeploySearch",
-      // toggle comment
-      "ctrl-c": "editor::ToggleComments"
+      "space i": "editor::ToggleInlayHints", // Toggle inlay hints
+      "space s w": "pane::DeploySearch", // Search word under cursor
+      "ctrl-c": "editor::ToggleComments", // Toggle comment
+      "cmd-alt-k": "editor::AddSelectionAbove", // Insert cursor above
+      "cmd-alt-j": "editor::AddSelectionBelow", // Insert cursor above
+      "alt-k": "editor::MoveLineUp", // Move Line up
+      "alt-j": "editor::MoveLineDown" // Move Line down
     }
   },
   // normal vim mode
