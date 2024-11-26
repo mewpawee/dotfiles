@@ -1,6 +1,5 @@
 #!/bin/sh
 TAP='
-homebrew/cask-fonts
 '
 
 EDITOR_PKG='
@@ -18,6 +17,7 @@ warp
 starship
 zellij  
 rectangle
+alt-tab
 '
 
 # ffmpegthumbnailer - video thumbnails
@@ -70,7 +70,7 @@ fi
 
 echo "Install Brew packages"
 # brew bundle install --file ~/.config/os/Brewfile
-brew tap $TAP
+# brew tap $TAP
 brew install $EDITOR_PKG
 brew install $BROWSER_PKG
 brew install $TERMINAL_PKG
