@@ -57,7 +57,9 @@
     "context": "EmptyPane || SharedScreen",
     "bindings": {
       // Open file finder
-      "space f": "file_finder::Toggle"
+      "space f": "file_finder::Toggle",
+      // toggle left dock
+      "space e": "workspace::ToggleLeftDock"
     }
   },
   // Workspace
@@ -81,9 +83,10 @@
   {
     "context": "ProjectPanel && not_editing",
     "bindings": {
+      // toggle left dock
+      "space e": "workspace::ToggleLeftDock",
       // move back to file
       "ctrl-l": "project_panel::ToggleFocus",
-      "space e": "workspace::ToggleLeftDock",
       // file &folder operations
       "a": "project_panel::NewFile",
       "A": "project_panel::NewDirectory",
