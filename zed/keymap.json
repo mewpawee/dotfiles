@@ -27,17 +27,27 @@
       "U": "vim::Redo",
       // Window movement bindings
       // Ctrl jklk to move between panes
-      "ctrl-h": ["workspace::ActivatePaneInDirection", "Left"],
-      "ctrl-l": ["workspace::ActivatePaneInDirection", "Right"],
-      "ctrl-k": ["workspace::ActivatePaneInDirection", "Up"],
-      "ctrl-j": ["workspace::ActivatePaneInDirection", "Down"],
-
+      "ctrl-h": [
+        "workspace::ActivatePaneInDirection",
+        "Left"
+      ],
+      "ctrl-l": [
+        "workspace::ActivatePaneInDirection",
+        "Right"
+      ],
+      "ctrl-k": [
+        "workspace::ActivatePaneInDirection",
+        "Up"
+      ],
+      "ctrl-j": [
+        "workspace::ActivatePaneInDirection",
+        "Down"
+      ],
       // +LSP
       // split on lookup definition
       "g D": "editor::GoToDefinitionSplit",
       // Symbol search
       "s s": "outline::Toggle",
-
       // + Buffers
       // Switch between buffers
       "shift-h": "pane::ActivatePrevItem",
@@ -49,7 +59,8 @@
       // Close other items
       "space b o": "pane::CloseInactiveItems",
       // Show project panel with current file
-      "space e": "pane::RevealInProjectPanel"
+      "space e": "pane::RevealInProjectPanel",
+      "space j": "journal::NewJournalEntry",
     }
   },
   // Empty pane, set of keybindings that are available when there is no active editor
@@ -59,7 +70,8 @@
       // Open file finder
       "space f": "file_finder::Toggle",
       // toggle left dock
-      "space e": "workspace::ToggleLeftDock"
+      "space e": "workspace::ToggleLeftDock",
+      "space j": "journal::NewJournalEntry",
     }
   },
   // Workspace
