@@ -27,7 +27,9 @@
   },
   "vim_mode": true,
   "relative_line_numbers": true,
-  "tabs": { "file_icons": true },
+  "tabs": {
+    "file_icons": true
+  },
   "inlay_hints": {
     "enabled": true,
     "show_type_hints": true,
@@ -40,7 +42,9 @@
       "format_on_save": {
         "external": {
           "command": "black",
-          "arguments": ["-"]
+          "arguments": [
+            "-"
+          ]
           // "arguments": ["-", "--line-length", "80"]
         }
       }
@@ -50,7 +54,11 @@
         {
           "external": {
             "command": "forge",
-            "arguments": ["fmt", "-r", "-"]
+            "arguments": [
+              "fmt",
+              "-r",
+              "-"
+            ]
           }
         }
         // "prettier",
