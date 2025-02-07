@@ -123,10 +123,8 @@ luac.out
 
 java
 
-lvim/plugin/packer_compiled.lua
 configstore
 truffle/
-habitipy/
 
 StardewValley/
 
@@ -137,3 +135,8 @@ github-copilot/
 zed/embeddings/**/*.mdb
 zed/prompts/**/*.mdb
 zed/*.tmp*
+zed/conversations/*
+
+# Apps
+gclould/
+siyuan/
