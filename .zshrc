@@ -4,6 +4,9 @@ eval "$(starship init zsh)"
 # using z(zoxide) on zsh
 eval "$(zoxide init zsh)"
 
+# using mise on zsh
+eval "$(mise activate zsh)"
+
 # Default Text Editor
 export EDITOR=hx
 export VISUAL=$EDITOR
@@ -24,11 +27,9 @@ alias cat="bat"
 # PATH
 export PATH=~/.local/bin:$PATH
 export PATH=~/.foundry/bin:$PATH
-export PATH=~/.asdf/shims:$PATH
 export PATH=~/.cargo/bin:$PATH
-export PATH=~/.bun/bin:$PATH
 export PATH=/opt/homebrew/opt/postgresql@15/bin:$PATH
-export PATH=$PATH:$(go env GOPATH)/bin
+# export PATH=$PATH:$(go env GOPATH)/bin
 
 # pnpm
 export PNPM_HOME="~/Library/pnpm"
@@ -48,9 +49,9 @@ antidote load
 [ -s "~/.bun/_bun" ] && source "~/.bun/_bun"
 
 
-
+# GCloud
 # The next line updates PATH for the Google Cloud SDK.
-if [ -f '~/Downloads/google-cloud-sdk/path.zsh.inc' ]; then . '~/Downloads/google-cloud-sdk/path.zsh.inc'; fi
+if [ -f '/Users/paweetantivasdakarn/Personal/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/paweetantivasdakarn/Personal/google-cloud-sdk/path.zsh.inc'; fi
 
 # The next line enables shell command completion for gcloud.
-if [ -f '~/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then . '~/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
+if [ -f '/Users/paweetantivasdakarn/Personal/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/paweetantivasdakarn/Personal/google-cloud-sdk/completion.zsh.inc'; fi
